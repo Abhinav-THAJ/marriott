@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { display: none; }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-bright": "#f8faf2",
+        "surface-tint": "#3e6569",
+        "on-secondary": "#ffffff",
+        "tertiary-fixed-dim": "#ffb59b",
+        "on-tertiary-container": "#e77a52",
+        "surface-container-lowest": "#ffffff",
+        "on-secondary-fixed-variant": "#274e44",
+        "on-tertiary": "#ffffff",
+        "secondary-container": "#bee9dc",
+        "background": "#f8faf2",
+        "secondary-fixed": "#c1ebdf",
+        "outline-variant": "#c0c8c9",
+        "primary-container": "#0a363a",
+        "inverse-on-surface": "#f0f2ea",
+        "surface-container": "#edefe7",
+        "on-secondary-container": "#436a60",
+        "on-secondary-fixed": "#00201a",
+        "on-error": "#ffffff",
+        "secondary-fixed-dim": "#a5cfc3",
+        "error-container": "#ffdad6",
+        "on-primary": "#ffffff",
+        "on-tertiary-fixed": "#380d00",
+        "outline": "#717879",
+        "on-primary-container": "#789fa4",
+        "on-tertiary-fixed-variant": "#7e2c08",
+        "on-surface": "#191c18",
+        "surface-container-high": "#e7e9e1",
+        "on-background": "#191c18",
+        "on-primary-fixed": "#002023",
+        "tertiary-container": "#5c1a00",
+        "tertiary": "#390d00",
+        "on-error-container": "#93000a",
+        "surface-dim": "#d9dbd3",
+        "primary-fixed": "#c1eaef",
+        "primary": "#002023",
+        "tertiary-fixed": "#ffdbcf",
+        "secondary": "#3f665c",
+        "inverse-surface": "#2e312c",
+        "surface-container-low": "#f3f4ec",
+        "on-primary-fixed-variant": "#254d51",
+        "primary-fixed-dim": "#a5ced2",
+        "surface-variant": "#e1e3dc",
+        "inverse-primary": "#a5ced2",
+        "error": "#ba1a1a",
+        "surface": "#f8faf2",
+        "surface-container-highest": "#e1e3dc",
+        "on-surface-variant": "#414849"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "space-md": "1.25rem",
+        "gutter-mobile": "1rem",
+        "space-xs": "0.375rem",
+        "space-lg": "2rem",
+        "space-xl": "3.5rem",
+        "space-sm": "0.75rem",
+        "margin-mobile": "1.25rem",
+        "gutter": "1.5rem",
+        "margin": "3rem"
+      },
+      "fontFamily": {
+        "headline-lg-mobile": ["Plus Jakarta Sans"],
+        "label-lg": ["Inter"],
+        "display-hero": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "body-lg": ["Inter"],
+        "label-md": ["Inter"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "body-md": ["Inter"],
+        "display-hero-mobile": ["Plus Jakarta Sans"],
+        "body-sm": ["Inter"],
+        "label-sm": ["Inter"]
+      },
+      "fontSize": {
+        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+        "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }],
+        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+        "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+        "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+        "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+        "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+      }
+    }
+  }
+};
+</script>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<header class="fixed top-0 left-0 w-full z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="bg-primary text-on-primary">
+<div class="w-full px-margin flex flex-wrap items-center justify-between h-10">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-error-container text-on-error-container px-space-xs py-0.5 rounded">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wide uppercase">Trauma Resuscitation Active</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[16px]">emergency</span>
+<span class="font-label-md text-label-md text-surface-bright">Emergency &amp; Ambulance: <strong class="text-secondary-fixed">108 / +91 (0) 484 719 9000</strong></span>
+</div>
+</div>
+<div class="hidden xl:flex items-center gap-space-md">
+<div class="flex items-center gap-space-sm font-label-md text-label-md text-primary-fixed-dim">
+<a class="hover:text-on-primary transition-colors" data-path="find-a-doctor" href="#">Find Doctor</a>
+<span class="text-outline">|</span>
+<a class="hover:text-on-primary transition-colors" data-path="patient-and-visitor-guide" href="#">Patient Portal (Reports &amp; Rx)</a>
+<span class="text-outline">|</span>
+<a class="hover:text-on-primary transition-colors" data-path="international-patients-and-second-opinion" href="#">International Patients Lounge</a>
+<span class="text-outline">|</span>
+<a class="hover:text-on-primary transition-colors" data-path="international-patients-and-second-opinion" href="#">Second Medical Opinion</a>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm">
+<div class="flex items-center gap-1 text-surface-variant cursor-pointer hover:text-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Kochi Institute</span>
+</div>
+<div class="flex items-center gap-1 text-surface-variant cursor-pointer hover:text-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[14px]">language</span>
+<span>EN</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface/90 backdrop-blur-xl">
+<div class="w-full px-margin flex items-center justify-between h-20">
+<div class="flex items-center gap-space-md">
+<a class="flex items-center gap-space-sm" data-path="home" href="#">
+<div class="w-10 h-10 rounded bg-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">local_hospital</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">SANCTUARY HEALTH</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mt-0.5">Institute of Quaternary Sciences</span>
+</div>
+</a>
+</div>
+<nav class="hidden lg:flex items-center gap-space-sm" data-active-classes="bg-secondary-container text-on-secondary-container font-semibold rounded">
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a>
+<a aria-current="page" class="px-space-xs py-1 transition-colors bg-secondary-container text-on-secondary-container font-semibold rounded" data-path="find-a-doctor" href="#">Find a Doctor</a>
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="institutes-of-care" href="#">Institutes of Care</a>
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="patient-and-visitor-guide" href="#">Patient &amp; Visitor Guide</a>
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="international-patients-and-second-opinion" href="#">International Patients &amp; Second Opinion</a>
+</nav>
+<div class="flex items-center gap-space-sm">
+<a class="hidden sm:flex items-center gap-1 px-space-xs py-1.5 rounded bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-all font-label-md text-label-md font-semibold" data-path="home" href="#">
+<span class="material-symbols-outlined text-[16px]">e911_emergency</span>
+<span>SOS Response</span>
+</a>
+<a class="px-space-sm py-2 rounded bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all font-label-md text-label-md font-semibold shadow-sm" data-path="home" href="#">Book Consultation</a>
+<a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary-container transition-colors" data-path="patient-and-visitor-guide" href="#">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<main class="w-full pt-[7.5rem] bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- TOP EDITORIAL HEADER & TELEMETRY -->
+<section class="w-full bg-surface-container-low px-margin py-space-lg">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-md">
+<!-- Breadcrumb & Mode Tag -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" data-path="home" href="#">Sanctuary Health</a>
+<span>/</span>
+<span class="text-primary font-semibold">Faculty Directory &amp; Specialist Appointment</span>
+</nav>
+<div class="flex items-center gap-2 bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Faculty On-Duty Registry • Spring Term 2025</span>
+</div>
+</div>
+<!-- Main Headline Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary font-bold">Academic Quaternary Directorate</span>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+            Distinguished Clinician-Scientists &amp; Surgical Faculty
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl font-light">
+            Search over 320+ quaternary specialists, collegiate surgical chairs, and international research fellows pioneering complex interventions across three integrated academic medical hubs.
+          </p>
+</div>
+<!-- Live OPD Telemetry Ticker Mini-Box -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Real-Time OPD Telemetry</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">sensors</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs text-center py-1">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">48</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Clinics</span>
+</div>
+<div class="flex flex-col bg-surface-container-low rounded py-0.5">
+<span class="font-headline-sm text-headline-sm text-secondary font-semibold">14</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">On-Call Triage</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">&lt;14m</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avg OPD Wait</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Direct hospital admission protocol operational across Kochi, Bangalore &amp; Hyderabad</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SEARCH & FILTER CONSOLE -->
+<section class="w-full px-margin -mt-4 relative z-20">
+<div class="max-w-7xl mx-auto bg-surface-container-lowest p-space-md rounded shadow-md flex flex-col gap-space-md">
+<!-- Search Bar -->
+<div class="flex flex-col md:flex-row gap-space-sm items-center">
+<div class="relative flex-1 w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-[22px]">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-low text-on-surface placeholder:text-outline text-body-md font-body-md rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" placeholder="Search by physician name, super-specialty, sub-procedure (e.g. 'Living Donor Liver', 'Epilepsy Surgery', 'TAVI')..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs w-full md:w-auto">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 px-space-md py-3 bg-primary text-on-primary font-label-md text-label-md rounded hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">manage_search</span>
+<span>Query Faculty</span>
+</button>
+<button class="px-space-sm py-3 bg-surface-container text-on-surface-variant font-label-md text-label-md rounded hover:bg-surface-variant transition-colors flex items-center gap-1" title="Reset all filters">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span class="hidden sm:inline">Reset</span>
+</button>
+</div>
+</div>
+<!-- Faceted Selectors Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm pt-1">
+<!-- Campus Selector -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Campus &amp; Medical City</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low px-3 py-2 text-body-sm font-body-sm text-on-surface rounded appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary">
+<option value="all">All Integrated Campuses</option>
+<option selected="" value="kochi">Kochi Central Medical City</option>
+<option value="bangalore">Bangalore Academic Campus</option>
+<option value="hyderabad">Hyderabad Medical City</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Specialty Selector -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Institute / Super-Specialty</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low px-3 py-2 text-body-sm font-body-sm text-on-surface rounded appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary">
+<option value="all">All Quaternary Institutes</option>
+<option value="transplant">Solid Organ Transplantation &amp; HPB</option>
+<option value="neuro">Comprehensive Neurosciences</option>
+<option value="cardio">Cardiovascular Sciences &amp; TAVI</option>
+<option value="oncology">Cellular Immunotherapy &amp; Oncology</option>
+<option value="ortho">Robotic Joint Reconstruction</option>
+<option value="fetal">Foetal Surgery &amp; Neonatology</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Consultation Mode -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Consultation Mode</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low px-3 py-2 text-body-sm font-body-sm text-on-surface rounded appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary">
+<option value="any">Any Appointment Mode</option>
+<option value="in-person">In-Person Outpatient (OPD)</option>
+<option value="tele">Global Video Tele-Consult</option>
+<option value="board">Collegiate Board Review (Tumor/Organ)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Availability Window -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Availability Horizon</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low px-3 py-2 text-body-sm font-body-sm text-on-surface rounded appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary">
+<option selected="" value="week">Available This Week</option>
+<option value="today">Slots Available Today</option>
+<option value="tomorrow">Available Tomorrow</option>
+<option value="weekend">Saturday Specialty OPD</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Quick Filter Pills -->
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<span class="font-label-sm text-label-sm text-outline font-semibold mr-1">Fast Filters:</span>
+<button class="px-space-xs py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1 hover:brightness-95 transition-all">
+<span class="material-symbols-outlined text-[14px]">precision_manufacturing</span>
+<span>Robotic Surgery Certified</span>
+</button>
+<button class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-variant transition-all">
+<span class="material-symbols-outlined text-[14px]">school</span>
+<span>US / UK Board Certified</span>
+</button>
+<button class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-variant transition-all">
+<span class="material-symbols-outlined text-[14px]">child_care</span>
+<span>Pediatric Super-Specialist</span>
+</button>
+<button class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-variant transition-all">
+<span class="material-symbols-outlined text-[14px]">vital_signs</span>
+<span>Living Donor Transplant</span>
+</button>
+<button class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-variant transition-all">
+<span class="material-symbols-outlined text-[14px]">science</span>
+<span>CAR-T / Cell Therapy Investigator</span>
+</button>
+</div>
+</div>
+</section>
+<!-- MAIN 8+4 ASYMMETRICAL CONTENT ZONE -->
+<section class="w-full px-margin py-space-xl">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- 8-COLUMN MAIN DIRECTORY FEED -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Results Header Bar -->
+<div class="flex flex-wrap items-center justify-between pb-space-xs gap-2">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Faculty Profiles</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">8 Quaternary Chairs Displayed</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>Sort By:</span>
+<span class="font-semibold text-primary underline cursor-pointer">Clinical Seniority</span>
+<span>•</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Earliest Availability</span>
+<span>•</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Academic Citations</span>
+</div>
+</div>
+<!-- DOCTOR CARD 1: Prof. Dr. Anand K. Nair -->
+<article class="bg-surface-container-lowest p-space-md rounded shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-space-md relative overflow-hidden">
+<div class="w-full md:w-44 flex-shrink-0 flex flex-col items-center">
+<img class="w-36 h-44 object-cover rounded shadow-sm" data-alt="Editorial close portrait of Prof. Dr. Anand K. Nair, distinguished senior Indian male liver transplant surgeon in pristine dark scrubs and white clinical coat, quiet authority, warm architectural hospital background, natural lighting, deep teal accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGxfmlTyL62lqf7Zw0Jbgtx_6SCatgSISMD-rU4NjRB9RsZV0fYhIJ1hmyKx6ex2IO91Z8kGTYqq7EcFkVm6t8_zXbNNb5kQk1lJFV3BC9Gqw8h2eX56arWZmUx0kv1_DnfCsEMGXg3_gXInBhH_wevueekHCVp_TsNGiLRnVt52WD5rPSdm8bXedCfN5ds9jyX50avETU-8JGwjCYpfAj0MzevBI3p906-by3rQUNX00m6CSkEO4U"/>
+<div class="w-full mt-2 flex items-center justify-center gap-1 bg-surface-container-low py-1 rounded text-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Next OPD: Tomorrow</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">HPB &amp; Organ Transplant</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">28+ Yrs Experience</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Kochi Central Campus</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold mt-1">
+                Prof. Dr. Anand K. Nair
+              </h2>
+<p class="font-label-md text-label-md text-secondary font-medium">
+                MBBS, MS (AIIMS), MCh (Surg Gastro), FRCS (Glasgow), FACS
+              </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                Chief of HPB Surgery &amp; Solid Organ Transplantation • Ex-Senior Fellow, Royal Free Hospital, London
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Pioneer in adult split-liver living donor transplants, laparoscopic donor hepatectomies, and pediatric ex-vivo liver resection. Supervised over 1,450 successful liver transplants with a 97.4% 1-year graft survival rate.
+              </p>
+<!-- Badges -->
+<div class="flex flex-wrap items-center gap-1.5 mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Robotic Laparoscopy</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Living Donor HPB</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">JCI Clinical Lead</span>
+</div>
+</div>
+<!-- Schedule & Actions -->
+<div class="pt-space-xs mt-2 bg-surface-container-low p-space-xs rounded flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px]">calendar_month</span>
+<span>Regular OPD: <strong>Mon, Wed, Fri (09:00 - 13:00)</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm hover:bg-surface-container font-semibold transition-colors shadow-sm">
+                  Video Teleconsult
+                </button>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container font-semibold transition-colors shadow-sm">
+                  Reserve In-Person OPD
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- DOCTOR CARD 2: Dr. Evelyn Vance -->
+<article class="bg-surface-container-lowest p-space-md rounded shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-space-md relative overflow-hidden">
+<div class="w-full md:w-44 flex-shrink-0 flex flex-col items-center">
+<img class="w-36 h-44 object-cover rounded shadow-sm" data-alt="Editorial portrait of Dr. Evelyn Vance, a renowned senior female neurosurgeon in slate scrubs and white blazer, calm expression of intellectual focus, modern clinical atrium background with diffuse ambient light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARqrL_lpYIRQvOTk8WWSduCVM9uQI2HNgPLhbnI-NhVYcWfLl76TmpuJZxUQtJ5t52dGKHchR5BjoTBdar2E8ts8cONLPrLQlNI2XyHh_OWrl-6liaE9rvnss0Jh3fV7YHm-vRLPlsXhIx6cNJQPsIZOnA3LMmLLyKjkH8u1mtx_NHLS9rDo9_q1Nr9MWPCAamaZF4hpyqb10kpkqmyvk7WVemtEf2nrpHYhJQdlr0_tjFFv4b92Ls"/>
+<div class="w-full mt-2 flex items-center justify-center gap-1 bg-surface-container-low py-1 rounded text-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Next OPD: Thursday</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">Neurosciences &amp; Skull Base</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">19+ Yrs Experience</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Bangalore Academic Campus</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold mt-1">
+                Dr. Evelyn Vance
+              </h2>
+<p class="font-label-md text-label-md text-secondary font-medium">
+                MD (Cleveland Clinic), FACS, FAANS, Fellowship in Skull Base (Zurich)
+              </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                Director, Neuro-Oncology &amp; Skull Base Surgery • Chair, Intraoperative MRI Suite
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Specialist in functional brain mapping, awake craniotomies for deep eloquent gliomas, and complex endoscopic endonasal pituitary interventions. Principal investigator in intraoperative optical coherence tomography trials.
+              </p>
+<!-- Badges -->
+<div class="flex flex-wrap items-center gap-1.5 mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Awake Craniotomy</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Endoscopic Skull Base</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">US Board Certified</span>
+</div>
+</div>
+<!-- Schedule & Actions -->
+<div class="pt-space-xs mt-2 bg-surface-container-low p-space-xs rounded flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px]">calendar_month</span>
+<span>Regular OPD: <strong>Tue, Thu (10:00 - 14:00)</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm hover:bg-surface-container font-semibold transition-colors shadow-sm">
+                  Video Teleconsult
+                </button>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container font-semibold transition-colors shadow-sm">
+                  Reserve In-Person OPD
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- DOCTOR CARD 3: Dr. Tariq Al-Mansoor -->
+<article class="bg-surface-container-lowest p-space-md rounded shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-space-md relative overflow-hidden">
+<div class="w-full md:w-44 flex-shrink-0 flex flex-col items-center">
+<img class="w-36 h-44 object-cover rounded shadow-sm" data-alt="Distinguished Middle Eastern male cardiologist in his late 50s with neat grey beard wearing navy surgical coat and stethoscope, confident posture, clinical research laboratory setting with subtle warm timber accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMUxXPZVQ9F_h_UWUTq8uQUcJvX13z9_zq9Ot_E0JzxtV38FQcbOLn_1ChOorBANXPBfBV-FfhVUzfIezgXvQvhGCg5-aKVBoDeUX0blkXsDXGlftfiPhLzT_EEWYmxuQ5g1fBDoaG_OORu-LdIpH-W49Yfmttr9GR8ScHs1ujx1jNB2NgZDsbvK5w7YRfEabJMMzukcrOjrb7M0l2onyZg593stua25KVt32mwIl81eXzAsaHli29"/>
+<div class="w-full mt-2 flex items-center justify-center gap-1 bg-surface-container-low py-1 rounded text-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Available Today (OPD)</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">Cardiac Sciences &amp; TAVI</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">27+ Yrs Experience</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Kochi Central Campus</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold mt-1">
+                Dr. Tariq Al-Mansoor
+              </h2>
+<p class="font-label-md text-label-md text-secondary font-medium">
+                MBBS, MD, DM (Cardiology), FACC, FSCAI (USA)
+              </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                Chair, Interventional Cardiology &amp; Structural Heart • National Proctor for Percutaneous Valves
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Over 12,000 coronary and structural cardiac interventions performed. Pioneer in transcatheter aortic valve implantation (TAVI/TAVR), MitraClip therapy, and complex bifurcation left-main stenting under intravascular ultrasound guidance.
+              </p>
+<!-- Badges -->
+<div class="flex flex-wrap items-center gap-1.5 mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">TAVI / MitraClip</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Structural Heart Chair</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">High-Risk Angioplasty</span>
+</div>
+</div>
+<!-- Schedule & Actions -->
+<div class="pt-space-xs mt-2 bg-surface-container-low p-space-xs rounded flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px]">calendar_month</span>
+<span>Regular OPD: <strong>Mon - Fri (08:30 - 12:30)</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm hover:bg-surface-container font-semibold transition-colors shadow-sm">
+                  Video Teleconsult
+                </button>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container font-semibold transition-colors shadow-sm">
+                  Reserve In-Person OPD
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- DOCTOR CARD 4: Prof. Dr. M. Sundaram -->
+<article class="bg-surface-container-lowest p-space-md rounded shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-space-md relative overflow-hidden">
+<div class="w-full md:w-44 flex-shrink-0 flex flex-col items-center">
+<img class="w-36 h-44 object-cover rounded shadow-sm" data-alt="Portrait of senior clinical pediatric hematologist Prof. Dr. M. Sundaram, gentle reassuring smile, scholarly demeanor, wire-rimmed spectacles, pristine clinical white apron with green emblem of research foundation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOIledoVADIQp83oRr5e9hLrzrfc-_L7zOXjO_kciyi96Uz5f9LeK397y2f4V0VNteRA8cxGarEb6Iv1U7KG-eUilW80iJHiuk31jLNIM-KU8yo0dsz3pVUuxWNtIfpzcNdGG8AVghWdhCwj9-HJFZEo1QLZGQEj8VdS7Z9hCRKmr3Sn2uYHjod1B5SEsqGnBswosR6r3E2083XcAfWcAI3Mh8UFuBU8TU0DhsytMBAcCwWxuKO8sx"/>
+<div class="w-full mt-2 flex items-center justify-center gap-1 bg-surface-container-low py-1 rounded text-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Next OPD: Wednesday</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">Cellular Oncology &amp; BMT</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">24+ Yrs Experience</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Hyderabad Medical City</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold mt-1">
+                Prof. Dr. M. Sundaram
+              </h2>
+<p class="font-label-md text-label-md text-secondary font-medium">
+                MD (Peds), MRCPCH (UK), DNB (Pediatrics), Fellowship in BMT (Great Ormond Street, London)
+              </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                Director, Cellular Immunotherapy &amp; Pediatric Bone Marrow Registry • Lead Investigator in CAR-T Trials
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Recognized worldwide for pioneering haploidentical bone marrow transplants in hemoglobinopathies and chimeric antigen receptor (CAR-T) cell therapies for relapsed acute lymphoblastic leukemias.
+              </p>
+<!-- Badges -->
+<div class="flex flex-wrap items-center gap-1.5 mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">CAR-T Cell Therapy</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Haploidentical BMT</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Pediatric Onco-Hematology</span>
+</div>
+</div>
+<!-- Schedule & Actions -->
+<div class="pt-space-xs mt-2 bg-surface-container-low p-space-xs rounded flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px]">calendar_month</span>
+<span>Regular OPD: <strong>Wed, Sat (09:00 - 13:00)</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm hover:bg-surface-container font-semibold transition-colors shadow-sm">
+                  Video Teleconsult
+                </button>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container font-semibold transition-colors shadow-sm">
+                  Reserve In-Person OPD
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- DOCTOR CARD 5: Dr. Rajeshwari Sengupta -->
+<article class="bg-surface-container-lowest p-space-md rounded shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-space-md relative overflow-hidden">
+<div class="w-full md:w-44 flex-shrink-0 flex flex-col items-center">
+<img class="w-36 h-44 object-cover rounded shadow-sm" data-alt="Confident female orthopedic surgeon Dr. Rajeshwari Sengupta in mid 40s wearing dark scrub top, architectural orthopedics lab background with robotic knee biomechanics models, professional soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgeqybmf1wh91B5l4GDahs79TnBwTqbTYZc-f3cObtjBLzrKVb9V1OG_BVFx5pu6nCN5a1zyu8qeRPIqhjIFySyMXc7D6D-3JZpYNIQ4dFItce9toBZJuLs_KtWZj9CIhMQPG0mwvj8uoaWgeG1p5-67pWNA68fgKX9csvrQDGnd2MkZAUMOBMb9Jk8KsX_p3ZHai-TFB1aBJIYsu7eWXX9cxcIDHDs8Jt4-1JliSlJS8KX0WjPc_6"/>
+<div class="w-full mt-2 flex items-center justify-center gap-1 bg-surface-container-low py-1 rounded text-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Next OPD: Friday</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">Robotic Orthopaedics</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">22+ Yrs Experience</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Kochi Central Campus</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold mt-1">
+                Dr. Rajeshwari Sengupta
+              </h2>
+<p class="font-label-md text-label-md text-secondary font-medium">
+                MS (Ortho, AIIMS), MCh (Orth), FRCS (Edin), Fellowship in Joint Reconstruction (Mayo Clinic)
+              </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                Senior Consultant, Robotic Joint Reconstruction &amp; Musculoskeletal Oncology • Mako Certified Proctor
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Specialized in sub-millimetric robotic total knee and hip arthroplasty with kinematic alignment protocols, complex revision surgeries, and 3D-printed custom titanium limb-salvage implants.
+              </p>
+<!-- Badges -->
+<div class="flex flex-wrap items-center gap-1.5 mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Mako Robotic System</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Revision Arthroplasty</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">3D Limb Salvage</span>
+</div>
+</div>
+<!-- Schedule & Actions -->
+<div class="pt-space-xs mt-2 bg-surface-container-low p-space-xs rounded flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px]">calendar_month</span>
+<span>Regular OPD: <strong>Mon, Wed, Fri (13:30 - 17:30)</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm hover:bg-surface-container font-semibold transition-colors shadow-sm">
+                  Video Teleconsult
+                </button>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container font-semibold transition-colors shadow-sm">
+                  Reserve In-Person OPD
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- DOCTOR CARD 6: Dr. Hélène Dubois -->
+<article class="bg-surface-container-lowest p-space-md rounded shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-space-md relative overflow-hidden">
+<div class="w-full md:w-44 flex-shrink-0 flex flex-col items-center">
+<img class="w-36 h-44 object-cover rounded shadow-sm" data-alt="Portrait of Dr. Hélène Dubois, European fetal surgeon with hair tied back, wearing surgical theater cap and navy scrub top, calm compassionate expression, modern fetal MRI console in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5dIJfAG-oDzW3W78TuZtQkqH3kZ2T1utVO6UP3cfqmlPGg4remYvH51vcJ5VghoAnTUg7F3zpywaPz-r8GLhVZ39SuYIlzeiK7Z3Geyrjl8e1sug-7mcYpgvMmFHV7BX_5vFEEg61IMyzuj1DVeSfl-aJvKkALzSIsw4Mvud6sGqA21-2K3r7y4UptBgSnj14cilk3pOxOlgBJqjDUEJyO8juW5N0ctt7BrZFBAUPf7MGgIcIH-2f"/>
+<div class="w-full mt-2 flex items-center justify-center gap-1 bg-surface-container-low py-1 rounded text-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Available Tuesday</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">Foetal Surgery &amp; NICU-III</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">18+ Yrs Experience</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Bangalore Academic Campus</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold mt-1">
+                Dr. Hélène Dubois
+              </h2>
+<p class="font-label-md text-label-md text-secondary font-medium">
+                MD, PhD (Sorbonne Université), FEBPS, Fellowship in Fetal Therapy (Leuven)
+              </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                Chief of Fetal Surgery &amp; Level-III Perinatal Intensive Care • International Fellow, ISUOG
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Internationally renowned for fetoscopic endoluminal tracheal occlusion (FETO) for congenital diaphragmatic hernia, in-utero spina bifida micro-repair, and laser ablation for twin-to-twin transfusion syndrome (TTTS).
+              </p>
+<!-- Badges -->
+<div class="flex flex-wrap items-center gap-1.5 mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Fetoscopic Surgery</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">TTTS Laser Ablation</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">High-Risk Perinatal</span>
+</div>
+</div>
+<!-- Schedule & Actions -->
+<div class="pt-space-xs mt-2 bg-surface-container-low p-space-xs rounded flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px]">calendar_month</span>
+<span>Regular OPD: <strong>Tue, Thu (09:00 - 13:00)</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm hover:bg-surface-container font-semibold transition-colors shadow-sm">
+                  Video Teleconsult
+                </button>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container font-semibold transition-colors shadow-sm">
+                  Reserve In-Person OPD
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Pagination Bar -->
+<div class="flex items-center justify-between pt-space-md pb-space-lg">
+<button class="px-4 py-2 rounded bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors disabled:opacity-40" disabled="">
+            ← Previous Page
+          </button>
+<div class="flex items-center gap-1 font-label-md text-label-md">
+<span class="w-8 h-8 rounded bg-primary text-on-primary flex items-center justify-center font-semibold">1</span>
+<span class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container cursor-pointer transition-colors">2</span>
+<span class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container cursor-pointer transition-colors">3</span>
+<span class="px-2 text-outline">...</span>
+<span class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container cursor-pointer transition-colors">42</span>
+</div>
+<button class="px-4 py-2 rounded bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-container transition-colors font-semibold shadow-sm">
+            Next Page →
+          </button>
+</div>
+</div>
+<!-- 4-COLUMN CONTEXTUAL SIDEBAR: FAST TRIAGE & SECOND OPINION -->
+<aside class="lg:col-span-4 flex flex-col gap-space-lg sticky top-28">
+<!-- FAST TRIAGE CONCIERGE DRAWER CARD -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Fast-Triage Concierge</h3>
+<span class="font-label-sm text-label-sm text-secondary font-medium">30-Min Clinical Nurse Response</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Unsure which quaternary super-specialist is indicated for your symptoms, imaging scans, or histopathology reports? Our Senior Triage Nurses will route your case to the collegiate surgical chair.
+          </p>
+<form class="flex flex-col gap-space-xs mt-1" onsubmit="event.preventDefault(); alert('Triage request received. A Senior Triage Officer will contact you within 30 minutes.');">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Patient Full Name</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface rounded text-body-sm font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" placeholder="e.g. S. Radhakrishnan" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Contact Phone / WhatsApp</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface rounded text-body-sm font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" placeholder="+91 98765 43210" required="" type="tel"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Primary Diagnosis or Presenting Complaint</label>
+<textarea class="w-full px-3 py-2 bg-surface-container-low text-on-surface rounded text-body-sm font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-inner resize-none" placeholder="Describe symptoms, primary organ affected, or ongoing chemotherapy/radiology regimen..." rows="3"></textarea>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<input class="rounded text-primary focus:ring-primary h-4 w-4" id="urgent_triage" type="checkbox"/>
+<label class="font-label-sm text-label-sm text-on-surface" for="urgent_triage">Mark as urgent pre-admission referral (&lt;24 hrs)</label>
+</div>
+<button class="w-full mt-2 py-2.5 bg-primary text-on-primary font-label-md text-label-md rounded hover:bg-primary-container font-semibold transition-colors shadow-sm flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Submit for Nurse Review</span>
+</button>
+</form>
+<div class="pt-space-xs mt-1 bg-surface-container-low p-space-xs rounded flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span>All uploads protected under HIPAA &amp; NABH clinical data governance standards.</span>
+</div>
+</div>
+<!-- SECOND OPINION BOARD BANNER CARD -->
+<div class="bg-primary text-on-primary p-space-md rounded shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 bg-secondary/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">group_work</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary-fixed font-bold">Collegiate Medical Boards</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright tracking-tight leading-snug">
+            Need a Multi-Disciplinary Tumor Board or Transplant Consensus?
+          </h3>
+<p class="font-body-sm text-body-sm text-primary-fixed-dim leading-relaxed">
+            For critical, ambiguous, or terminal diagnoses, access Sanctuary's Quaternary Review Board comprising surgical oncologists, medical geneticists, interventional radiologists, and histopathologists.
+          </p>
+<div class="space-y-2 pt-1 font-label-sm text-label-sm text-surface-bright">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[16px]">check_circle</span>
+<span>Complete cross-examination of DICOM imaging &amp; biopsied tissue</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[16px]">check_circle</span>
+<span>Signed consensus dossier delivered within 72 hours</span>
+</div>
+</div>
+<a class="mt-2 w-full py-2.5 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md rounded text-center font-semibold hover:bg-secondary-fixed-dim transition-colors shadow-sm block" data-path="international-patients-and-second-opinion" href="#">
+            Initiate Second Opinion Protocol →
+          </a>
+</div>
+<!-- EMERGENCY TRIAGE DISPATCH HOTLINE CALLOUT -->
+<div class="bg-surface-container p-space-md rounded shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-error">
+<span class="material-symbols-outlined text-[20px]">e911_emergency</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Emergent Stroke &amp; Cardiac Direct Line</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">
+            Immediate Level-1 Trauma &amp; Cath Lab Bed Allocation:
+          </p>
+<div class="text-headline-sm font-headline-sm text-primary font-bold tracking-tight">
+            +91 (0) 484 719 9000
+          </div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Air Ambulance Helipad &amp; Mobile ECMO teams on 7-minute standby.</span>
+</div>
+</aside>
+</div>
+</section>
+<!-- CLINICAL SPECIALTY DIRECTORY QUICK ACCESS FOOTNOTE STRIP -->
+<section class="w-full bg-surface-container-low px-margin py-space-lg">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Institutes of Quaternary Care Directory</h3>
+<a class="font-label-md text-label-md text-secondary font-semibold hover:underline flex items-center gap-1" data-path="institutes-of-care" href="#">
+<span>Explore All 18 Academic Centers</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm flex flex-col gap-1 hover:bg-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-[22px]">cardiology</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Cardiac Sciences</span>
+<span class="font-label-sm text-label-sm text-outline">42 Quaternary Faculty</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm flex flex-col gap-1 hover:bg-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-[22px]">neurology</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Neurosciences</span>
+<span class="font-label-sm text-label-sm text-outline">38 Quaternary Faculty</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm flex flex-col gap-1 hover:bg-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-[22px]">vital_signs</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Organ Transplant</span>
+<span class="font-label-sm text-label-sm text-outline">29 Quaternary Faculty</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm flex flex-col gap-1 hover:bg-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-[22px]">biotech</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Cellular Oncology</span>
+<span class="font-label-sm text-label-sm text-outline">46 Quaternary Faculty</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm flex flex-col gap-1 hover:bg-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-[22px]">child_care</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Foetal &amp; Neonatal</span>
+<span class="font-label-sm text-label-sm text-outline">21 Quaternary Faculty</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm flex flex-col gap-1 hover:bg-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-[22px]">precision_manufacturing</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Robotic Surgery</span>
+<span class="font-label-sm text-label-sm text-outline">34 Quaternary Faculty</span>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<footer class="w-full bg-primary text-on-primary">
+<div class="w-full px-margin py-space-xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-4 bg-secondary-fixed rounded-full"></span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright">Quaternary Centers</h3>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Cardiovascular &amp; Thoracic Surgery</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Comprehensive Neuro-Oncology</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Solid Organ Transplantation</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Precision Genomics &amp; Cellular Therapy</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Foetal &amp; Neonatal Intensive Care</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-4 bg-secondary-fixed rounded-full"></span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright">Patient Care &amp; Guides</h3>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+<li class="hover:text-surface-bright transition-colors"><a data-path="patient-and-visitor-guide" href="#">Visiting Hours &amp; ICU Protocols</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="patient-and-visitor-guide" href="#">Inpatient Admission Checklist</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="patient-and-visitor-guide" href="#">Patient Rights &amp; Responsibilities</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="international-patients-and-second-opinion" href="#">Global Tele-Consult Protocol</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="patient-and-visitor-guide" href="#">Cashless TPA &amp; Tariff Estimator</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-4 bg-secondary-fixed rounded-full"></span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright">Academics &amp; Trials</h3>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+<li class="hover:text-surface-bright transition-colors"><a data-path="home" href="#">Institutional Bioethics Board (IRB)</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="find-a-doctor" href="#">Sub-Specialty Fellowship Programmes</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="home" href="#">Active Clinical Trials Registry</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="home" href="#">Archival Library of Medicine</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Translational Stem Cell Lab</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-4 bg-error rounded-full"></span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright">Emergency Dispatch</h3>
+</div>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+<div class="bg-primary-container p-space-sm rounded">
+<span class="font-label-md text-label-md text-surface-bright block">Kochi Institute Campus</span>
+<span class="text-secondary-fixed">Air Ambulance Pad: Pad-01 East</span>
+<span class="block text-outline-variant font-label-sm text-label-sm">Dispatch: +91 (0) 484 719 9001</span>
+</div>
+<div class="bg-primary-container p-space-sm rounded">
+<span class="font-label-md text-label-md text-surface-bright block">Bangalore Campus</span>
+<span class="text-secondary-fixed">Level-1 Trauma Bay</span>
+<span class="block text-outline-variant font-label-sm text-label-sm">Dispatch: +91 (0) 80 4492 8100</span>
+</div>
+<div class="bg-primary-container p-space-sm rounded">
+<span class="font-label-md text-label-md text-surface-bright block">Hyderabad Medical City</span>
+<span class="text-secondary-fixed">Emergency Stroke Unit</span>
+<span class="block text-outline-variant font-label-sm text-label-sm">Dispatch: +91 (0) 40 6821 7000</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md bg-primary-container rounded p-space-md flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[28px]">verified</span>
+<div>
+<span class="font-label-md text-label-md text-surface-bright block">JCI Gold Seal of Approval</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Hospital Program Standard (7th Edition)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[28px]">health_and_safety</span>
+<div>
+<span class="font-label-md text-label-md text-surface-bright block">NABH Digital Health</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Excellence in Clinical Safety</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[28px]">biotech</span>
+<div>
+<span class="font-label-md text-label-md text-surface-bright block">CAP Certified Lab</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">College of American Pathologists</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[28px]">eco</span>
+<div>
+<span class="font-label-md text-label-md text-surface-bright block">Green Hospital Platinum</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">IGBC Certified Infrastructure</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-primary-fixed-dim">
+<div class="flex flex-wrap items-center gap-space-sm">
+<a class="hover:text-surface-bright transition-colors" data-path="patient-and-visitor-guide" href="#">Bio-Medical Waste Annual Disclosures</a>
+<span>•</span>
+<a class="hover:text-surface-bright transition-colors" data-path="home" href="#">Clinical Governance &amp; Patient Safety</a>
+<span>•</span>
+<a class="hover:text-surface-bright transition-colors" data-path="patient-and-visitor-guide" href="#">HIPAA &amp; Privacy Policy</a>
+<span>•</span>
+<a class="hover:text-surface-bright transition-colors" data-path="patient-and-visitor-guide" href="#">Terms of Admission</a>
+</div>
+<div class="text-outline-variant">© 2025 Sanctuary Health &amp; Research Institute. All quaternary medical procedures monitored by the Global Clinical Directorate.</div>
+</div>
+</div>
+</footer>
+</body></html>

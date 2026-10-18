@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { display: none; }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-bright": "#f8faf2",
+        "surface-tint": "#3e6569",
+        "on-secondary": "#ffffff",
+        "tertiary-fixed-dim": "#ffb59b",
+        "on-tertiary-container": "#e77a52",
+        "surface-container-lowest": "#ffffff",
+        "on-secondary-fixed-variant": "#274e44",
+        "on-tertiary": "#ffffff",
+        "secondary-container": "#bee9dc",
+        "background": "#f8faf2",
+        "secondary-fixed": "#c1ebdf",
+        "outline-variant": "#c0c8c9",
+        "primary-container": "#0a363a",
+        "inverse-on-surface": "#f0f2ea",
+        "surface-container": "#edefe7",
+        "on-secondary-container": "#436a60",
+        "on-secondary-fixed": "#00201a",
+        "on-error": "#ffffff",
+        "secondary-fixed-dim": "#a5cfc3",
+        "error-container": "#ffdad6",
+        "on-primary": "#ffffff",
+        "on-tertiary-fixed": "#380d00",
+        "outline": "#717879",
+        "on-primary-container": "#789fa4",
+        "on-tertiary-fixed-variant": "#7e2c08",
+        "on-surface": "#191c18",
+        "surface-container-high": "#e7e9e1",
+        "on-background": "#191c18",
+        "on-primary-fixed": "#002023",
+        "tertiary-container": "#5c1a00",
+        "tertiary": "#390d00",
+        "on-error-container": "#93000a",
+        "surface-dim": "#d9dbd3",
+        "primary-fixed": "#c1eaef",
+        "primary": "#002023",
+        "tertiary-fixed": "#ffdbcf",
+        "secondary": "#3f665c",
+        "inverse-surface": "#2e312c",
+        "surface-container-low": "#f3f4ec",
+        "on-primary-fixed-variant": "#254d51",
+        "primary-fixed-dim": "#a5ced2",
+        "surface-variant": "#e1e3dc",
+        "inverse-primary": "#a5ced2",
+        "error": "#ba1a1a",
+        "surface": "#f8faf2",
+        "surface-container-highest": "#e1e3dc",
+        "on-surface-variant": "#414849"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "space-md": "1.25rem",
+        "gutter-mobile": "1rem",
+        "space-xs": "0.375rem",
+        "space-lg": "2rem",
+        "space-xl": "3.5rem",
+        "space-sm": "0.75rem",
+        "margin-mobile": "1.25rem",
+        "gutter": "1.5rem",
+        "margin": "3rem"
+      },
+      "fontFamily": {
+        "headline-lg-mobile": ["Plus Jakarta Sans"],
+        "label-lg": ["Inter"],
+        "display-hero": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "body-lg": ["Inter"],
+        "label-md": ["Inter"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "body-md": ["Inter"],
+        "display-hero-mobile": ["Plus Jakarta Sans"],
+        "body-sm": ["Inter"],
+        "label-sm": ["Inter"]
+      },
+      "fontSize": {
+        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+        "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }],
+        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+        "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+        "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+        "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+        "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+      }
+    }
+  }
+};
+</script>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<header class="fixed top-0 left-0 w-full z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="bg-primary text-on-primary">
+<div class="w-full px-margin flex flex-wrap items-center justify-between h-10">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-error-container text-on-error-container px-space-xs py-0.5 rounded">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wide uppercase">Trauma Resuscitation Active</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[16px]">emergency</span>
+<span class="font-label-md text-label-md text-surface-bright">Emergency &amp; Ambulance: <strong class="text-secondary-fixed">108 / +91 (0) 484 719 9000</strong></span>
+</div>
+</div>
+<div class="hidden xl:flex items-center gap-space-md">
+<div class="flex items-center gap-space-sm font-label-md text-label-md text-primary-fixed-dim">
+<a class="hover:text-on-primary transition-colors" data-path="find-a-doctor" href="#">Find Doctor</a>
+<span class="text-outline">|</span>
+<a class="hover:text-on-primary transition-colors" data-path="patient-and-visitor-guide" href="#">Patient Portal (Reports &amp; Rx)</a>
+<span class="text-outline">|</span>
+<a class="hover:text-on-primary transition-colors" data-path="international-patients-and-second-opinion" href="#">International Patients Lounge</a>
+<span class="text-outline">|</span>
+<a class="hover:text-on-primary transition-colors" data-path="international-patients-and-second-opinion" href="#">Second Medical Opinion</a>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm">
+<div class="flex items-center gap-1 text-surface-variant cursor-pointer hover:text-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Kochi Institute</span>
+</div>
+<div class="flex items-center gap-1 text-surface-variant cursor-pointer hover:text-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[14px]">language</span>
+<span>EN</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface/90 backdrop-blur-xl">
+<div class="w-full px-margin flex items-center justify-between h-20">
+<div class="flex items-center gap-space-md">
+<a class="flex items-center gap-space-sm" data-path="home" href="#">
+<div class="w-10 h-10 rounded bg-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">local_hospital</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">SANCTUARY HEALTH</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mt-0.5">Institute of Quaternary Sciences</span>
+</div>
+</a>
+</div>
+<nav class="hidden lg:flex items-center gap-space-sm" data-active-classes="bg-secondary-container text-on-secondary-container font-semibold rounded">
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a>
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="find-a-doctor" href="#">Find a Doctor</a>
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="institutes-of-care" href="#">Institutes of Care</a>
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="patient-and-visitor-guide" href="#">Patient &amp; Visitor Guide</a>
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="international-patients-and-second-opinion" href="#">International Patients &amp; Second Opinion</a>
+</nav>
+<div class="flex items-center gap-space-sm">
+<a class="hidden sm:flex items-center gap-1 px-space-xs py-1.5 rounded bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-all font-label-md text-label-md font-semibold" data-path="home" href="#">
+<span class="material-symbols-outlined text-[16px]">e911_emergency</span>
+<span>SOS Response</span>
+</a>
+<a class="px-space-sm py-2 rounded bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all font-label-md text-label-md font-semibold shadow-sm" data-path="home" href="#">Book Consultation</a>
+<a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary-container transition-colors" data-path="patient-and-visitor-guide" href="#">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<main class="w-full pt-[7.5rem] bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Editorial Header & Canvas Hero Section -->
+<section class="relative w-full bg-surface-container-low px-margin py-space-xl overflow-hidden">
+<!-- Subtle Ambient Biophilic Glow -->
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-secondary-container/30 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 left-1/4 w-80 h-80 rounded-full bg-surface-tint/5 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto flex flex-col gap-space-md relative z-10">
+<!-- Breadcrumb & Institute Badge -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">Patient &amp; Visitor Guide</span>
+</nav>
+<div class="flex items-center gap-space-xs bg-secondary-container/50 text-on-secondary-container px-space-xs py-1 rounded">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">format_image_left</span>
+<span class="font-label-sm text-label-sm tracking-wide uppercase">Institutional Transparency Protocol 2025</span>
+</div>
+</div>
+<!-- Main Headline & Subhead with Asymmetrical Editorial Spacing -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Clinical Inpatient &amp; Concierge Manual</span>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+            A Seamless Care Journey. <br/>
+<span class="text-secondary font-light">Compassionate Guidance at Every Step.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mt-space-xs">
+            Comprehensive admission guidelines, transparent procedure tariffs, round-the-clock cashless TPA facilitation, and evidence-based visitor infection control protocols designed for quiet healing.
+          </p>
+</div>
+<!-- Metric pill for quick reassurance -->
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-xs bg-surface-container-lowest p-space-sm rounded shadow-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary leading-none">28 mins</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Average TPA Pre-Auth Clearance</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Direct Bed Allocation Concierge Active</span>
+</div>
+</div>
+</div>
+<!-- Quick Navigation Jump Bar -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-sm">
+<a class="font-label-md text-label-md px-space-sm py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center gap-1 shadow-sm" href="#inpatient-admission">
+<span class="material-symbols-outlined text-[16px]">hotel</span>
+<span>Inpatient Admission</span>
+</a>
+<a class="font-label-md text-label-md px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-primary transition-all flex items-center gap-1" href="#cashless-tpa">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span>Cashless Insurance &amp; TPA</span>
+</a>
+<a class="font-label-md text-label-md px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-primary transition-all flex items-center gap-1" href="#room-suites">
+<span class="material-symbols-outlined text-[16px]">king_bed</span>
+<span>Healing Suites &amp; Tariffs</span>
+</a>
+<a class="font-label-md text-label-md px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-primary transition-all flex items-center gap-1" href="#diagnostic-vault">
+<span class="material-symbols-outlined text-[16px]">radiology</span>
+<span>Diagnostic &amp; DICOM Vault</span>
+</a>
+<a class="font-label-md text-label-md px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-primary transition-all flex items-center gap-1" href="#visitor-protocols">
+<span class="material-symbols-outlined text-[16px]">nest_clock_farsight_analog</span>
+<span>Visitor &amp; ICU Hours</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 1: Pre-Admission & Planned Hospitalization Roadmap -->
+<section class="w-full px-margin py-space-xl bg-surface" id="inpatient-admission">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Standard Care Trajectory</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Pre-Admission &amp; Planned Hospitalization</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            A frictionless pathway eliminating bureaucratic lobby queues through predictive digital registration and direct-to-suite transit.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="font-label-md text-label-md px-space-sm py-2 rounded bg-surface-container-low text-primary hover:bg-surface-container flex items-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Admission Checklist (PDF)</span>
+</button>
+</div>
+</div>
+<!-- Asymmetric 4-Step Interactive Roadmap Spine -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md relative">
+<!-- Connecting baseline rule -->
+<div class="hidden lg:block absolute top-12 left-8 right-8 h-0.5 bg-surface-container-high z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col gap-space-sm bg-surface-container-lowest p-space-md rounded shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">
+              1
+            </div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-semibold">Pre-Transit</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">E-Booking &amp; Clinical Slip</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Upload consultant admission recommendation letter along with pre-op investigations via web portal or encrypted WhatsApp channel.
+            </p>
+</div>
+<div class="mt-auto pt-space-xs bg-surface-container-low p-space-xs rounded">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">document_scanner</span>
+<span>Requires: Primary Doctor Rx Slip</span>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col gap-space-sm bg-surface-container-lowest p-space-md rounded shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center font-headline-sm text-headline-sm">
+              2
+            </div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-semibold">TPA Fast-Lane</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Pre-Authorization Sync</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Centralized desk secures digital initial authorization from your insurer 48 hours prior to procedure, locking zero out-of-pocket holds.
+            </p>
+</div>
+<div class="mt-auto pt-space-xs bg-surface-container-low p-space-xs rounded">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">timer</span>
+<span>Turnaround: Under 30 Minutes</span>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col gap-space-sm bg-surface-container-lowest p-space-md rounded shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-headline-sm text-headline-sm">
+              3
+            </div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-semibold">Day of Care</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Direct-to-Suite Arrival</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Bypass outpatient counters entirely. Personal Patient Relationship Officer (PRO) escorts companion directly to prepared healing suite.
+            </p>
+</div>
+<div class="mt-auto pt-space-xs bg-surface-container-low p-space-xs rounded">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">door_front</span>
+<span>Sanitized Suite Ready on Arrival</span>
+</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col gap-space-sm bg-surface-container-lowest p-space-md rounded shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">
+              4
+            </div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-semibold">Recovery Exit</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Digital Paperless Exit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Discharge summaries, pharmaceutical regimens, dietary charts, and follow-up slots transmitted straight to smartphone with zero billing queue.
+            </p>
+</div>
+<div class="mt-auto pt-space-xs bg-surface-container-low p-space-xs rounded">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">cloud_done</span>
+<span>Secure Cloud Vault Sync</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: 100% Cashless TPA & Insurance Desk Hub -->
+<section class="w-full px-margin py-space-xl bg-surface-container-low" id="cashless-tpa">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row justify-between lg:items-end gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Institutional Financial Navigation</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">100% Cashless TPA &amp; Insurance Desk Hub</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+            Zero-friction processing with 40+ leading general insurance providers, autonomous corporate TPAs, and international health evacuation networks.
+          </p>
+</div>
+<!-- Live Desk Status -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded shadow-sm">
+<div class="w-3 h-3 rounded-full bg-secondary-container animate-ping"></div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase font-semibold">Physical TPA Station</span>
+<span class="font-label-md text-label-md text-primary font-bold">Ground Floor, Atrium West (24x7 Open)</span>
+</div>
+<a class="ml-space-sm text-primary hover:text-secondary flex items-center gap-1 font-label-md text-label-md font-semibold" href="tel:+914847199040">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Ext. 9040</span>
+</a>
+</div>
+</div>
+<!-- Main TPA Grid: Partner Showcase + Interactive Coverage Calculator -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- Empanelled Insurers & Govt Schemes (8 Columns) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Insurer Tiles -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary">Primary Empanelled Insurers &amp; Third-Party Administrators</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Instant Green-Channel API</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">Star Health</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tier-1 Direct Pre-Auth</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">HDFC ERGO</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-Claim Clearance</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">Care Health</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cashless Anywhere</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">ICICI Lombard</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Digitized Porting</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">Niva Bupa</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ReAssure Preferred</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">Bajaj Allianz</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fast-Track OPD/IPD</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">corporate_fare</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">Medi Assist TPA</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">E-Card Scan Ready</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">corporate_fare</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">Vidal Health</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Enterprise Desk</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">corporate_fare</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">Paramount TPA</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Direct Settlement</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Government Health Schemes & Armed Forces Entitlements -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Government &amp; Defense Veteran Coverage</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="bg-surface-container p-space-sm rounded flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">military_tech</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">ECHS &amp; CGHS Empanelled</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Exclusive priority desk for ex-servicemen, armed forces dependents, and Central Government Health Scheme beneficiaries with cashless medicine dispensaries.
+                  </p>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">public</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">Ayushman Bharat &amp; Global Bupa</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    PM-JAY Gold card kiosks with designated kiosk coordinators. Full support for Cigna Global, Allianz Care, and SOS International medevac policies.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Coverage & Tariff Estimator Widget (4 Columns) -->
+<div class="lg:col-span-4 bg-primary text-on-primary p-space-md rounded shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[22px]">calculate</span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright">Tariff &amp; Policy Estimator</h3>
+</div>
+<p class="font-body-sm text-body-sm text-primary-fixed-dim">
+            Simulate your anticipated procedure co-pay, room eligibility, and out-of-pocket estimates under institutional tariff schedules.
+          </p>
+<form class="flex flex-col gap-space-xs" onsubmit="event.preventDefault(); document.getElementById('calc-result').classList.remove('hidden');">
+<div>
+<label class="font-label-sm text-label-sm text-surface-bright block mb-1">Select Clinical Specialty</label>
+<select class="w-full bg-primary-container text-on-primary rounded p-space-xs font-body-sm text-body-sm focus:outline-none" id="est-specialty">
+<option value="cardio">Cardiothoracic Surgery (CABG / Valve)</option>
+<option value="neuro">Neuro-Oncology &amp; Spine</option>
+<option value="ortho">Joint Reconstruction &amp; Robotic Arthroplasty</option>
+<option value="transplant">Solid Organ Transplantation</option>
+<option value="gi">Advanced Laparoscopic / GI Sciences</option>
+</select>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-surface-bright block mb-1">Primary Insurer / Scheme</label>
+<select class="w-full bg-primary-container text-on-primary rounded p-space-xs font-body-sm text-body-sm focus:outline-none" id="est-insurer">
+<option>Star Health Comprehensive</option>
+<option>HDFC ERGO Optima Secure</option>
+<option>Care Supreme</option>
+<option>CGHS / ECHS Scheme</option>
+<option>Self-Pay / International Direct</option>
+</select>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-surface-bright block mb-1">Preferred Accommodation</label>
+<select class="w-full bg-primary-container text-on-primary rounded p-space-xs font-body-sm text-body-sm focus:outline-none" id="est-room">
+<option value="deluxe">Deluxe Single Room</option>
+<option value="suite">Presidential Healing Suite</option>
+<option value="twin">Twin Sharing En-Suite</option>
+<option value="hdu">High Dependency Unit (HDU)</option>
+</select>
+</div>
+<button class="mt-space-xs w-full py-2 rounded bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold hover:bg-secondary-fixed-dim transition-all shadow-sm" type="submit">
+              Compute Coverage Breakdown
+            </button>
+</form>
+<!-- Result Container (Initially hidden or active) -->
+<div class="bg-primary-container p-space-sm rounded mt-space-xs flex flex-col gap-space-xs" id="calc-result">
+<div class="flex justify-between items-center text-surface-bright font-label-md text-label-md">
+<span class="text-primary-fixed-dim">Estimated TPA Approval:</span>
+<span class="font-bold text-secondary-fixed">88% - 94%</span>
+</div>
+<div class="flex justify-between items-center text-surface-bright font-label-md text-label-md">
+<span class="text-primary-fixed-dim">Estimated Deductible:</span>
+<span class="font-bold">₹ 12,500 - 18,000</span>
+</div>
+<div class="flex justify-between items-center text-surface-bright font-label-md text-label-md">
+<span class="text-primary-fixed-dim">Average LOS (Stay):</span>
+<span>4.2 Days</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline-variant mt-1">
+              * Indicative calculation based on IRDAI guidelines &amp; normative quaternary hospital charge structures.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Accommodation, Room Categories & Healing Suites -->
+<section class="w-full px-margin py-space-xl bg-surface" id="room-suites">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Biophilic Architecture &amp; Hospitality</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Healing Suites &amp; Inpatient Living Spaces</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Care spaces engineered with circadian-tuned lighting, acoustic isolation, HEPA-14 positive air pressure, and dedicated family lounges to foster psychological peace during clinical recovery.
+        </p>
+</div>
+<!-- Suites Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Room 1: Presidential Healing Suite -->
+<div class="bg-surface-container-lowest rounded overflow-hidden shadow-sm flex flex-col hover:shadow-md transition-shadow">
+<div class="relative w-full h-48 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A serene presidential luxury hospital recovery suite with hardwood floors, natural light through large windows overlooking a green botanical garden, warm linen curtains, modern leather recliner for companions, and discrete ceiling-mounted medical panels." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXRTabvVikqnLowInBQ6Nu_Zc9wddAH9znYkrsIjDG5djt5jZytpfEZ_umuAgd680JRy-dj5mpJWyCa1IqpyTvzxRhmIh7e4s9gyYLloAb6xTts8Z-WdgcxPkTtg3hAzEe3o4RuUUq__mb07MNCknvdmOY6u9aX3ghhnKBImN-Q73SGAcCElzPUSCGH1rwZB6GF_HMUNCedIVyLgM3qAQp-3J45A0oI0i44jzx_mKs84AvyJiab5N9"/>
+<div class="absolute top-2 right-2 bg-primary text-on-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded uppercase font-semibold">
+              Quaternary Elite
+            </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<h3 class="font-headline-sm text-headline-sm text-primary">Presidential Suite</h3>
+<span class="font-label-lg text-label-lg font-bold text-secondary">₹ 28,500<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/day</span></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+                Dual-room layout with private attendant salon, kitchenette, dining console, and panoramic healing terrace.
+              </p>
+<ul class="flex flex-col gap-1 font-label-sm text-label-sm text-on-surface">
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">person_check</span>
+<span>1:1 Dedicated Critical Care Nurse</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">air</span>
+<span>Independent HEPA-14 Cleanroom Air</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">meeting_room</span>
+<span>Private Consultation Lounge</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-1.5 rounded bg-surface-container text-primary font-label-md text-label-md font-semibold hover:bg-secondary-container hover:text-on-secondary-container transition-all" type="button">
+              Request Suite Booking
+            </button>
+</div>
+</div>
+<!-- Room 2: Deluxe Single Patient Room -->
+<div class="bg-surface-container-lowest rounded overflow-hidden shadow-sm flex flex-col hover:shadow-md transition-shadow">
+<div class="relative w-full h-48 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern spacious private single hospital patient room with soft ambient warm lighting, an ergonomic clinical profiling bed, motorized window blinds, companion sofa sleeper, en-suite bathroom with accessibility handrails, and clean minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Jr9nQQIZQlR2w-CK6ft6kUAIuQXii8m4ht-2wcekky-35NfuzeeXrNEoa7B837cSW-pmAYkSekJqUmG0kGoIoZiggjOLcX4-kMg1250E4EJhoDMEeuIrwhUjcB3JLmzBlsbzueNMJAUfVMGgQTQBKgVRyNg53tl2qwstKN_rZAybmRZa-GEXwwIUkCZZx4zi98ZhOgR1L3pTbB4gCpcWL9IXOyEuxYU98E94oXNFnTVz1sZ4N8mI"/>
+<div class="absolute top-2 right-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-space-xs py-0.5 rounded uppercase font-semibold">
+              Most Selected
+            </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<h3 class="font-headline-sm text-headline-sm text-primary">Deluxe Single Room</h3>
+<span class="font-label-lg text-label-lg font-bold text-secondary">₹ 11,500<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/day</span></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+                Individual therapeutic room with convertible companion couch, motorized bed, en-suite accessible bath, and streaming entertainment.
+              </p>
+<ul class="flex flex-col gap-1 font-label-sm text-label-sm text-on-surface">
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">person_check</span>
+<span>1:2 Nurse-to-Patient Ratio</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">bed</span>
+<span>Companion Sleeper Included</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">tv</span>
+<span>Clinical Infotainment Tablet</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-1.5 rounded bg-surface-container text-primary font-label-md text-label-md font-semibold hover:bg-secondary-container hover:text-on-secondary-container transition-all" type="button">
+              Request Suite Booking
+            </button>
+</div>
+</div>
+<!-- Room 3: Twin Sharing Room -->
+<div class="bg-surface-container-lowest rounded overflow-hidden shadow-sm flex flex-col hover:shadow-md transition-shadow">
+<div class="relative w-full h-48 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A brightly lit twin sharing clinical hospital ward separated by thick acoustic linen privacy curtains, clinical ceiling monitors, companion armchairs, sanitized warm flooring, and modern medical supply outlets." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJpXmxBu0215z_pnSCxfaJFN5e1IBwO3qr9WJQ60S9vzfZ_L7I7-kZu-wMVAuGaWPlchqfN7jbUHx3CrMHo1pqU7P8N0wab9nbREpm32WuT3-KnbKuRc0hOaYVRgo28bilPKXMcQBjq7ag81JtSQnn1kLH9ZkFDqNO_zmHCRAZIPW40g1lPgyVhJiVOwY6GKKfpoJsCnUzUMyr1FwoQNT8xEvtUsJr6pIRTYVoHjElI5Elxernrs6-"/>
+<div class="absolute top-2 right-2 bg-surface-container-highest text-on-surface font-label-sm text-label-sm px-space-xs py-0.5 rounded uppercase font-semibold">
+              TPA Standard
+            </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<h3 class="font-headline-sm text-headline-sm text-primary">Twin Sharing Room</h3>
+<span class="font-label-lg text-label-lg font-bold text-secondary">₹ 6,200<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/day</span></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+                Dual occupancy room with acoustic privacy separation drapes, individualized monitor arrays, and attendant seating.
+              </p>
+<ul class="flex flex-col gap-1 font-label-sm text-label-sm text-on-surface">
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">person_check</span>
+<span>1:3 Nurse-to-Patient Ratio</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">privacy_tip</span>
+<span>Acoustic Acoustic Curtaining</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+<span>Individual Secure Lockers</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-1.5 rounded bg-surface-container text-primary font-label-md text-label-md font-semibold hover:bg-secondary-container hover:text-on-secondary-container transition-all" type="button">
+              Request Suite Booking
+            </button>
+</div>
+</div>
+<!-- Room 4: Step-down High Dependency Unit (HDU) -->
+<div class="bg-surface-container-lowest rounded overflow-hidden shadow-sm flex flex-col hover:shadow-md transition-shadow">
+<div class="relative w-full h-48 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High Dependency Unit hospital step-down care bay with multi-parameter telemetry vital monitors, medical oxygen pendants, clean glass partitions, specialized infusion pumps, and soft warm ambient observation lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoH9MEwiNQfPJxJ6Xk225m1S2LjXzBCehTR4IP-vfhYvoLZPu8eTxpZGGJf_bRWhxBhxZ2USjAAB6UpradNPjAD8bxt9vCHZ_4-VERHZBHfMROg63-UjF-8wy9BctzGO_TrE9t-riNfn5uaLI__1i9aqQ25C3ayIlYKuifvQVA-oUXIKxvx8hw-WWckdg9oGji1yqMxtins6SGGeoDPmkRFuZiVF6wPffjkqoYl5f3CmzoZrDXR3xc"/>
+<div class="absolute top-2 right-2 bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded uppercase font-semibold">
+              Step-Down Monitoring
+            </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<h3 class="font-headline-sm text-headline-sm text-primary">High Dependency (HDU)</h3>
+<span class="font-label-lg text-label-lg font-bold text-secondary">₹ 14,800<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/day</span></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+                Continuous invasive and non-invasive hemodynamic telemetry monitoring for transition between ICU and general ward environments.
+              </p>
+<ul class="flex flex-col gap-1 font-label-sm text-label-sm text-on-surface">
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">person_check</span>
+<span>1:1 High Dependency Nursing</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">monitor_heart</span>
+<span>Central Cardiac Telemetry Station</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">emergency</span>
+<span>Crash-Cart Immediate Access</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-1.5 rounded bg-surface-container text-primary font-label-md text-label-md font-semibold hover:bg-secondary-container hover:text-on-secondary-container transition-all" type="button">
+              View HDU Parameters
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Digital Diagnostics & DICOM Vault -->
+<section class="w-full px-margin py-space-xl bg-surface-container-low" id="diagnostic-vault">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">PACS &amp; Laboratory Cloud Registry</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Digital Diagnostics &amp; High-Resolution DICOM Vault</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Access complete pathology investigations, blood profiles, 3T MRI volumetrics, and PET-CT scan slices anywhere worldwide. No physical CD required.
+        </p>
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<div class="flex items-start gap-space-xs">
+<div class="w-6 h-6 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">key</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-primary font-semibold block">OTP-Secured Instant Decryption</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enter registered UHID and mobile OTP to view dynamic 3D multi-planar CT &amp; MRI reconstructions directly in web browser.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<div class="w-6 h-6 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">biotech</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-primary font-semibold block">CAP &amp; NABL Certified Molecular Panels</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Next-generation sequencing (NGS) and immunohistochemistry reports signed off by senior academic pathologists.</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-sm">
+<a class="px-space-md py-2 rounded bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center gap-2 shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">cloud_download</span>
+<span>Launch PACS DICOM Viewer</span>
+</a>
+<button class="px-space-md py-2 rounded bg-surface-container text-primary font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">home_health</span>
+<span>Book Home Sample Collection</span>
+</button>
+</div>
+</div>
+<!-- Interactive Verification Card -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-lg rounded shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">lock_reset</span>
+<span class="font-headline-sm text-headline-sm text-primary">Patient Quick-Access Portal</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant">256-Bit SSL Encrypted</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Sanctuary Health UHID (Unique Hospital ID)</label>
+<div class="flex gap-space-xs">
+<input class="flex-1 bg-surface-container-low px-space-sm py-2 rounded font-body-sm text-body-sm text-primary placeholder:text-outline focus:outline-none focus:bg-surface-container" placeholder="e.g. SH-2025-883921" type="text"/>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Registered Mobile Number</label>
+<div class="flex gap-space-xs">
+<span class="bg-surface-container-low px-space-sm py-2 rounded font-body-sm text-body-sm text-on-surface-variant">+91</span>
+<input class="flex-1 bg-surface-container-low px-space-sm py-2 rounded font-body-sm text-body-sm text-primary placeholder:text-outline focus:outline-none focus:bg-surface-container" placeholder="98765 43210" type="tel"/>
+<button class="px-space-sm py-2 rounded bg-secondary text-on-secondary font-label-md text-label-md font-semibold hover:bg-on-secondary-fixed-variant transition-all" type="button">
+                Send OTP
+              </button>
+</div>
+</div>
+</div>
+<!-- Recent Diagnostic Samples Ready Banner -->
+<div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold block">Automated WhatsApp Delivery Available</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Opt-in to get PDF copies sent automatically upon doctor verification.</span>
+</div>
+</div>
+<input checked="" class="w-4 h-4 accent-primary rounded" type="checkbox"/>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: Visitor Guidelines & ICU Timings -->
+<section class="w-full px-margin py-space-xl bg-surface" id="visitor-protocols">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Strict Infection Prevention Norms</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Visitor Guidelines &amp; Intensive Care Protocols</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          To maintain micro-biologically sterile recovery environments for immunocompromised, post-transplant, and cardiothoracic patients, Sanctuary enforces designated quiet visitor windows.
+        </p>
+</div>
+<!-- Schedule Panels & Protocol Highlights -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Inpatient General Wards & Rooms (6 Cols) -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Inpatient Ward Visiting Hours</h3>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Floors 3 through 9</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-semibold">Max 2 Passes</span>
+</div>
+<!-- Time Slot Box -->
+<div class="bg-surface-container-low p-space-md rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">wb_twilight</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary">16:30 – 18:30 IST</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Daily Evening Visiting Window</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-space-xs py-1 rounded font-semibold">Open Daily</span>
+</div>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">badge</span>
+<span><strong>Digital Visitor Passes:</strong> Issued at lobby kiosk. Must be visibly clipped to attire at all times in wards.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">no_food</span>
+<span><strong>Outside Food Policy:</strong> Strict restriction. Organic clinical patient meals prepared under dietary supervision only.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">child_care</span>
+<span><strong>Children Visitors:</strong> Visitors under 12 years are not permitted in clinical wards for epidemiological safety.</span>
+</div>
+</div>
+</div>
+<!-- Critical Care & Transplant ICU Protocols (6 Cols) -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">medical_services</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">ICU &amp; Transplant Cleanrooms</h3>
+<span class="font-label-sm text-label-sm text-error font-semibold">Level 2 Surgical &amp; Medical ICUs</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-semibold">1 Attendant Only</span>
+</div>
+<!-- Dual Intensive Slot Box -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Morning Slot</span>
+<span class="font-headline-sm text-headline-sm text-primary">11:00 – 12:00</span>
+<span class="font-label-sm text-label-sm text-secondary block mt-0.5">Consultant Rounds Briefing</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Evening Slot</span>
+<span class="font-headline-sm text-headline-sm text-primary">17:00 – 18:00</span>
+<span class="font-label-sm text-label-sm text-secondary block mt-0.5">Family Prognosis Sync</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">masks</span>
+<span><strong>Mandatory Sterile Gowning:</strong> Hospital-grade PPE, shoe covers, and KN95 respirators dispensed at the airlock entry.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">phonelink_erase</span>
+<span><strong>Zero Electronic Devices:</strong> Mobile phones must remain in secure lockers to prevent electromagnetic telemetry interference.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">tv</span>
+<span><strong>Virtual ICU Tele-Window:</strong> Family members unable to gown up may request high-definition bedside video interaction from the lounge.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Campus Amenities & Support Contact Strip -->
+<section class="w-full px-margin py-space-lg bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- 24/7 Pharmacy & Discharge Meds -->
+<div class="bg-surface-container-lowest p-space-md rounded flex items-center gap-space-sm shadow-sm">
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">medication</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">24/7 Outpatient Pharmacy</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Atrium Tower Ground Floor</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Direct Bedside Delivery: Dial Ext. 811</span>
+</div>
+</div>
+<!-- Organic Dining & Attendant Cafeteria -->
+<div class="bg-surface-container-lowest p-space-md rounded flex items-center gap-space-sm shadow-sm">
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">restaurant</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">The Sanctuary Dining Lounge</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Nutritious farm-to-table meals</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Hours: 06:30 – 23:00 IST</span>
+</div>
+</div>
+<!-- Prayer & Meditation Sanctuary -->
+<div class="bg-surface-container-lowest p-space-md rounded flex items-center gap-space-sm shadow-sm">
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">self_improvement</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Multi-Faith Quiet Sanctuary</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Floor 4, Zen Garden Atrium</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Always Open for Prayer &amp; Peace</span>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<footer class="w-full bg-primary text-on-primary">
+<div class="w-full px-margin py-space-xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-4 bg-secondary-fixed rounded-full"></span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright">Quaternary Centers</h3>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Cardiovascular &amp; Thoracic Surgery</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Comprehensive Neuro-Oncology</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Solid Organ Transplantation</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Precision Genomics &amp; Cellular Therapy</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Foetal &amp; Neonatal Intensive Care</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-4 bg-secondary-fixed rounded-full"></span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright">Patient Care &amp; Guides</h3>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+<li class="hover:text-surface-bright transition-colors"><a data-path="patient-and-visitor-guide" href="#">Visiting Hours &amp; ICU Protocols</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="patient-and-visitor-guide" href="#">Inpatient Admission Checklist</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="patient-and-visitor-guide" href="#">Patient Rights &amp; Responsibilities</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="international-patients-and-second-opinion" href="#">Global Tele-Consult Protocol</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="patient-and-visitor-guide" href="#">Cashless TPA &amp; Tariff Estimator</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-4 bg-secondary-fixed rounded-full"></span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright">Academics &amp; Trials</h3>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+<li class="hover:text-surface-bright transition-colors"><a data-path="home" href="#">Institutional Bioethics Board (IRB)</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="find-a-doctor" href="#">Sub-Specialty Fellowship Programmes</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="home" href="#">Active Clinical Trials Registry</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="home" href="#">Archival Library of Medicine</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Translational Stem Cell Lab</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-4 bg-error rounded-full"></span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright">Emergency Dispatch</h3>
+</div>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+<div class="bg-primary-container p-space-sm rounded">
+<span class="font-label-md text-label-md text-surface-bright block">Kochi Institute Campus</span>
+<span class="text-secondary-fixed">Air Ambulance Pad: Pad-01 East</span>
+<span class="block text-outline-variant font-label-sm text-label-sm">Dispatch: +91 (0) 484 719 9001</span>
+</div>
+<div class="bg-primary-container p-space-sm rounded">
+<span class="font-label-md text-label-md text-surface-bright block">Bangalore Campus</span>
+<span class="text-secondary-fixed">Level-1 Trauma Bay</span>
+<span class="block text-outline-variant font-label-sm text-label-sm">Dispatch: +91 (0) 80 4492 8100</span>
+</div>
+<div class="bg-primary-container p-space-sm rounded">
+<span class="font-label-md text-label-md text-surface-bright block">Hyderabad Medical City</span>
+<span class="text-secondary-fixed">Emergency Stroke Unit</span>
+<span class="block text-outline-variant font-label-sm text-label-sm">Dispatch: +91 (0) 40 6821 7000</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md bg-primary-container rounded p-space-md flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[28px]">verified</span>
+<div>
+<span class="font-label-md text-label-md text-surface-bright block">JCI Gold Seal of Approval</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Hospital Program Standard (7th Edition)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[28px]">health_and_safety</span>
+<div>
+<span class="font-label-md text-label-md text-surface-bright block">NABH Digital Health</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Excellence in Clinical Safety</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[28px]">biotech</span>
+<div>
+<span class="font-label-md text-label-md text-surface-bright block">CAP Certified Lab</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">College of American Pathologists</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[28px]">eco</span>
+<div>
+<span class="font-label-md text-label-md text-surface-bright block">Green Hospital Platinum</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">IGBC Certified Infrastructure</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-primary-fixed-dim">
+<div class="flex flex-wrap items-center gap-space-sm">
+<a class="hover:text-surface-bright transition-colors" data-path="patient-and-visitor-guide" href="#">Bio-Medical Waste Annual Disclosures</a>
+<span>•</span>
+<a class="hover:text-surface-bright transition-colors" data-path="home" href="#">Clinical Governance &amp; Patient Safety</a>
+<span>•</span>
+<a class="hover:text-surface-bright transition-colors" data-path="patient-and-visitor-guide" href="#">HIPAA &amp; Privacy Policy</a>
+<span>•</span>
+<a class="hover:text-surface-bright transition-colors" data-path="patient-and-visitor-guide" href="#">Terms of Admission</a>
+</div>
+<div class="text-outline-variant">© 2025 Sanctuary Health &amp; Research Institute. All quaternary medical procedures monitored by the Global Clinical Directorate.</div>
+</div>
+</div>
+</footer>
+</body></html>

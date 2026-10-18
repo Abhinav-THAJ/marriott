@@ -1,0 +1,157 @@
+[
+  {
+    "screen_id": "47ad60df632849d8ae28c159bcb0c797",
+    "data": {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "{\"name\":\"projects/1816000037640221096/screens/47ad60df632849d8ae28c159bcb0c797\",\"title\":\"Sanctuary Health & Research Institute - Quaternary Medicine\",\"screenshot\":{\"name\":\"projects/1816000037640221096/screens/47ad60df632849d8ae28c159bcb0c797/fileEntries/screenshot\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AEtjO1XOdLX9BZQr4WZkPu8KkWOUAVoRiNmWoywqCYT7cifE8ITiMHFe2IWqBCrW4TaWbat-pKmmWgAE6IiaPGjYplWdW1DeWZGxIj71Qd50HSIg88teATLlm3OTIwBDE0zk0820MQQCIqDptLFSebKUEr34MlsA2gGFe5os7fgWgFF11vjJqpkRE5x5iDo-1M2w-nJW9XDFbuUn6EkC7t_p0QjtO5YJuuuuNbINfO7I58UN72glT5VVGLPeVGk\"},\"htmlCode\":{\"name\":\"projects/1816000037640221096/screens/47ad60df632849d8ae28c159bcb0c797/fileEntries/html\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1ZTFmMWQ1YmMzYWIwOTI1ZDRiYmU1MmU0MDE1EgsSBxCRs_2bhQoYAZIBIwoKcHJvamVjdF9pZBIVQhMxODE2MDAwMDM3NjQwMjIxMDk2&filename=&opi=89354086\",\"mimeType\":\"text/html\"},\"width\":\"2560\",\"height\":\"12430\",\"deviceType\":\"DESKTOP\"}",
+            "type": "text"
+          }
+        ],
+        "structuredContent": {
+          "deviceType": "DESKTOP",
+          "height": "12430",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1ZTFmMWQ1YmMzYWIwOTI1ZDRiYmU1MmU0MDE1EgsSBxCRs_2bhQoYAZIBIwoKcHJvamVjdF9pZBIVQhMxODE2MDAwMDM3NjQwMjIxMDk2&filename=&opi=89354086",
+            "mimeType": "text/html",
+            "name": "projects/1816000037640221096/screens/47ad60df632849d8ae28c159bcb0c797/fileEntries/html"
+          },
+          "name": "projects/1816000037640221096/screens/47ad60df632849d8ae28c159bcb0c797",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1XOdLX9BZQr4WZkPu8KkWOUAVoRiNmWoywqCYT7cifE8ITiMHFe2IWqBCrW4TaWbat-pKmmWgAE6IiaPGjYplWdW1DeWZGxIj71Qd50HSIg88teATLlm3OTIwBDE0zk0820MQQCIqDptLFSebKUEr34MlsA2gGFe5os7fgWgFF11vjJqpkRE5x5iDo-1M2w-nJW9XDFbuUn6EkC7t_p0QjtO5YJuuuuNbINfO7I58UN72glT5VVGLPeVGk",
+            "name": "projects/1816000037640221096/screens/47ad60df632849d8ae28c159bcb0c797/fileEntries/screenshot"
+          },
+          "title": "Sanctuary Health & Research Institute - Quaternary Medicine",
+          "width": "2560"
+        }
+      }
+    }
+  },
+  {
+    "screen_id": "c9dfcd3814854d52b651267827073edd",
+    "data": {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "{\"name\":\"projects/1816000037640221096/screens/c9dfcd3814854d52b651267827073edd\",\"title\":\"Institutes of Care - Sanctuary Health & Research Institute\",\"screenshot\":{\"name\":\"projects/1816000037640221096/screens/c9dfcd3814854d52b651267827073edd/fileEntries/screenshot\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AEtjO1UM9EcRuWv_KCC77V5kNk06Nmuxk_yeqR_uFLSMXQYstG-5diqCdTSHwCU-4YFI1dPDlH6M92_My1qek1THwKsDWNRD7eYPKUsMgYJRxj0d-RtPmczW9govqodxGD0fJ5D3Zv6Obvy7S8_7XKzVUxQVCP8MvdAUkkx-B3kHs34spQPiLZn7PWPbXyZgOtBrl2qzFSv_Nz94IJR44MrZP9leWJv6vlo11vrniAhrSHqXZThQjfvAJhnVAw\"},\"htmlCode\":{\"name\":\"projects/1816000037640221096/screens/c9dfcd3814854d52b651267827073edd/fileEntries/html\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1ZTIwMTI4MjU3MzEwNTIyOWQwNmRjMDg3OGFjEgsSBxCRs_2bhQoYAZIBIwoKcHJvamVjdF9pZBIVQhMxODE2MDAwMDM3NjQwMjIxMDk2&filename=&opi=89354086\",\"mimeType\":\"text/html\"},\"width\":\"2560\",\"height\":\"10104\",\"deviceType\":\"DESKTOP\"}",
+            "type": "text"
+          }
+        ],
+        "structuredContent": {
+          "deviceType": "DESKTOP",
+          "height": "10104",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1ZTIwMTI4MjU3MzEwNTIyOWQwNmRjMDg3OGFjEgsSBxCRs_2bhQoYAZIBIwoKcHJvamVjdF9pZBIVQhMxODE2MDAwMDM3NjQwMjIxMDk2&filename=&opi=89354086",
+            "mimeType": "text/html",
+            "name": "projects/1816000037640221096/screens/c9dfcd3814854d52b651267827073edd/fileEntries/html"
+          },
+          "name": "projects/1816000037640221096/screens/c9dfcd3814854d52b651267827073edd",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1UM9EcRuWv_KCC77V5kNk06Nmuxk_yeqR_uFLSMXQYstG-5diqCdTSHwCU-4YFI1dPDlH6M92_My1qek1THwKsDWNRD7eYPKUsMgYJRxj0d-RtPmczW9govqodxGD0fJ5D3Zv6Obvy7S8_7XKzVUxQVCP8MvdAUkkx-B3kHs34spQPiLZn7PWPbXyZgOtBrl2qzFSv_Nz94IJR44MrZP9leWJv6vlo11vrniAhrSHqXZThQjfvAJhnVAw",
+            "name": "projects/1816000037640221096/screens/c9dfcd3814854d52b651267827073edd/fileEntries/screenshot"
+          },
+          "title": "Institutes of Care - Sanctuary Health & Research Institute",
+          "width": "2560"
+        }
+      }
+    }
+  },
+  {
+    "screen_id": "7e4ca693117c438f986633442ad271e2",
+    "data": {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "{\"name\":\"projects/1816000037640221096/screens/7e4ca693117c438f986633442ad271e2\",\"title\":\"International Patients & Second Opinion - Sanctuary Health\",\"screenshot\":{\"name\":\"projects/1816000037640221096/screens/7e4ca693117c438f986633442ad271e2/fileEntries/screenshot\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AEtjO1U_tZuwZBso1KxsQ6XruoyvR1vBMaE9h25sPKeyMAYGIok83PVjx73jPg3jn1vnyVHYShIy9OBYveaFWRfu-ejv9aNIFadWkPWr-q5HoTtl34JQYLHp91G0SkS4nTUe2NPqpfOouecv2YW3tVdeaofITQfCUS7esATthHMPdX1y6BONdM1sFT4x1YBvQztn7KJmY-s9cseS6QvKO2ojF_Vp5Mi-r0bWieZ28AX_vz0X34GwwpetoIu8yH0\"},\"htmlCode\":{\"name\":\"projects/1816000037640221096/screens/7e4ca693117c438f986633442ad271e2/fileEntries/html\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1ZTIwMTIyMDkxMmIwNTNiNzg4MzA0MjE4OWUxEgsSBxCRs_2bhQoYAZIBIwoKcHJvamVjdF9pZBIVQhMxODE2MDAwMDM3NjQwMjIxMDk2&filename=&opi=89354086\",\"mimeType\":\"text/html\"},\"width\":\"2560\",\"height\":\"10156\",\"deviceType\":\"DESKTOP\"}",
+            "type": "text"
+          }
+        ],
+        "structuredContent": {
+          "deviceType": "DESKTOP",
+          "height": "10156",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1ZTIwMTIyMDkxMmIwNTNiNzg4MzA0MjE4OWUxEgsSBxCRs_2bhQoYAZIBIwoKcHJvamVjdF9pZBIVQhMxODE2MDAwMDM3NjQwMjIxMDk2&filename=&opi=89354086",
+            "mimeType": "text/html",
+            "name": "projects/1816000037640221096/screens/7e4ca693117c438f986633442ad271e2/fileEntries/html"
+          },
+          "name": "projects/1816000037640221096/screens/7e4ca693117c438f986633442ad271e2",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1U_tZuwZBso1KxsQ6XruoyvR1vBMaE9h25sPKeyMAYGIok83PVjx73jPg3jn1vnyVHYShIy9OBYveaFWRfu-ejv9aNIFadWkPWr-q5HoTtl34JQYLHp91G0SkS4nTUe2NPqpfOouecv2YW3tVdeaofITQfCUS7esATthHMPdX1y6BONdM1sFT4x1YBvQztn7KJmY-s9cseS6QvKO2ojF_Vp5Mi-r0bWieZ28AX_vz0X34GwwpetoIu8yH0",
+            "name": "projects/1816000037640221096/screens/7e4ca693117c438f986633442ad271e2/fileEntries/screenshot"
+          },
+          "title": "International Patients & Second Opinion - Sanctuary Health",
+          "width": "2560"
+        }
+      }
+    }
+  },
+  {
+    "screen_id": "3e1fe633d8ad4d2095fa4aaacfd20741",
+    "data": {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "{\"name\":\"projects/1816000037640221096/screens/3e1fe633d8ad4d2095fa4aaacfd20741\",\"title\":\"Find a Doctor - Sanctuary Health & Research Institute\",\"screenshot\":{\"name\":\"projects/1816000037640221096/screens/3e1fe633d8ad4d2095fa4aaacfd20741/fileEntries/screenshot\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AEtjO1XH0P3SB_7JmLpLRv-CqwioPbjJnOXOYzIVbI6V5P-lvQWJSdmX557mY6wJTTY827Sbnmo5vEi89_r_nGrE1PdbQ_bMR_Nh2AWXcR8LBNMqxDZz6JDRta2wo7zEzZu6GfR9qPeAYLVrb4_cJaaBN2LXIaa0Yfe0_xzuIFCAnQm61_Tu2TnO0-hne8b_BHvD9EX9awBQnZuPkImMSwFTPONHpQ_BVoDl76uOZAWpfWYwUvc7AXk5kaLBFw\"},\"htmlCode\":{\"name\":\"projects/1816000037640221096/screens/3e1fe633d8ad4d2095fa4aaacfd20741/fileEntries/html\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1ZTIwMTI1OWIxMzMwOTI1Yzc4YTg5MDgyNzVjEgsSBxCRs_2bhQoYAZIBIwoKcHJvamVjdF9pZBIVQhMxODE2MDAwMDM3NjQwMjIxMDk2&filename=&opi=89354086\",\"mimeType\":\"text/html\"},\"width\":\"2560\",\"height\":\"7460\",\"deviceType\":\"DESKTOP\"}",
+            "type": "text"
+          }
+        ],
+        "structuredContent": {
+          "deviceType": "DESKTOP",
+          "height": "7460",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1ZTIwMTI1OWIxMzMwOTI1Yzc4YTg5MDgyNzVjEgsSBxCRs_2bhQoYAZIBIwoKcHJvamVjdF9pZBIVQhMxODE2MDAwMDM3NjQwMjIxMDk2&filename=&opi=89354086",
+            "mimeType": "text/html",
+            "name": "projects/1816000037640221096/screens/3e1fe633d8ad4d2095fa4aaacfd20741/fileEntries/html"
+          },
+          "name": "projects/1816000037640221096/screens/3e1fe633d8ad4d2095fa4aaacfd20741",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1XH0P3SB_7JmLpLRv-CqwioPbjJnOXOYzIVbI6V5P-lvQWJSdmX557mY6wJTTY827Sbnmo5vEi89_r_nGrE1PdbQ_bMR_Nh2AWXcR8LBNMqxDZz6JDRta2wo7zEzZu6GfR9qPeAYLVrb4_cJaaBN2LXIaa0Yfe0_xzuIFCAnQm61_Tu2TnO0-hne8b_BHvD9EX9awBQnZuPkImMSwFTPONHpQ_BVoDl76uOZAWpfWYwUvc7AXk5kaLBFw",
+            "name": "projects/1816000037640221096/screens/3e1fe633d8ad4d2095fa4aaacfd20741/fileEntries/screenshot"
+          },
+          "title": "Find a Doctor - Sanctuary Health & Research Institute",
+          "width": "2560"
+        }
+      }
+    }
+  },
+  {
+    "screen_id": "4cecfea2d04f43b3b1ce43b3dc4fe621",
+    "data": {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "{\"name\":\"projects/1816000037640221096/screens/4cecfea2d04f43b3b1ce43b3dc4fe621\",\"title\":\"Patient & Visitor Guide - Sanctuary Health & Research Institute\",\"screenshot\":{\"name\":\"projects/1816000037640221096/screens/4cecfea2d04f43b3b1ce43b3dc4fe621/fileEntries/screenshot\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AEtjO1VXs60CNbcRRku7lEVHePTgrJCP0U7NZHnptFJpsC35pLb0QlrT7rjk04B0-kyqibrHwEx_VR1ZJSWuTD0aELimYH58B2XTAG4bj_r7WPln9QJ3oBVwFybXW9Kz2GktMtNp81teTduTK0NvfYqnSLIGwlt5-GYN2PFVNQplh-sAphs8R4bfHQPDCKrS0h1qBrqTi0vEeoDyOi6UnDy8Tfg2-_EbYU8V0zcy41t4q-hooe10r5H7tLcPFjg\"},\"htmlCode\":{\"name\":\"projects/1816000037640221096/screens/4cecfea2d04f43b3b1ce43b3dc4fe621/fileEntries/html\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1ZTIwMTI0OTg1YmUwNTNiNzg4MzA0MjE4OWUxEgsSBxCRs_2bhQoYAZIBIwoKcHJvamVjdF9pZBIVQhMxODE2MDAwMDM3NjQwMjIxMDk2&filename=&opi=89354086\",\"mimeType\":\"text/html\"},\"width\":\"2560\",\"height\":\"8970\",\"deviceType\":\"DESKTOP\"}",
+            "type": "text"
+          }
+        ],
+        "structuredContent": {
+          "deviceType": "DESKTOP",
+          "height": "8970",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1ZTIwMTI0OTg1YmUwNTNiNzg4MzA0MjE4OWUxEgsSBxCRs_2bhQoYAZIBIwoKcHJvamVjdF9pZBIVQhMxODE2MDAwMDM3NjQwMjIxMDk2&filename=&opi=89354086",
+            "mimeType": "text/html",
+            "name": "projects/1816000037640221096/screens/4cecfea2d04f43b3b1ce43b3dc4fe621/fileEntries/html"
+          },
+          "name": "projects/1816000037640221096/screens/4cecfea2d04f43b3b1ce43b3dc4fe621",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1VXs60CNbcRRku7lEVHePTgrJCP0U7NZHnptFJpsC35pLb0QlrT7rjk04B0-kyqibrHwEx_VR1ZJSWuTD0aELimYH58B2XTAG4bj_r7WPln9QJ3oBVwFybXW9Kz2GktMtNp81teTduTK0NvfYqnSLIGwlt5-GYN2PFVNQplh-sAphs8R4bfHQPDCKrS0h1qBrqTi0vEeoDyOi6UnDy8Tfg2-_EbYU8V0zcy41t4q-hooe10r5H7tLcPFjg",
+            "name": "projects/1816000037640221096/screens/4cecfea2d04f43b3b1ce43b3dc4fe621/fileEntries/screenshot"
+          },
+          "title": "Patient & Visitor Guide - Sanctuary Health & Research Institute",
+          "width": "2560"
+        }
+      }
+    }
+  }
+]

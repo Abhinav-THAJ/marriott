@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { display: none; }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-bright": "#f8faf2",
+        "surface-tint": "#3e6569",
+        "on-secondary": "#ffffff",
+        "tertiary-fixed-dim": "#ffb59b",
+        "on-tertiary-container": "#e77a52",
+        "surface-container-lowest": "#ffffff",
+        "on-secondary-fixed-variant": "#274e44",
+        "on-tertiary": "#ffffff",
+        "secondary-container": "#bee9dc",
+        "background": "#f8faf2",
+        "secondary-fixed": "#c1ebdf",
+        "outline-variant": "#c0c8c9",
+        "primary-container": "#0a363a",
+        "inverse-on-surface": "#f0f2ea",
+        "surface-container": "#edefe7",
+        "on-secondary-container": "#436a60",
+        "on-secondary-fixed": "#00201a",
+        "on-error": "#ffffff",
+        "secondary-fixed-dim": "#a5cfc3",
+        "error-container": "#ffdad6",
+        "on-primary": "#ffffff",
+        "on-tertiary-fixed": "#380d00",
+        "outline": "#717879",
+        "on-primary-container": "#789fa4",
+        "on-tertiary-fixed-variant": "#7e2c08",
+        "on-surface": "#191c18",
+        "surface-container-high": "#e7e9e1",
+        "on-background": "#191c18",
+        "on-primary-fixed": "#002023",
+        "tertiary-container": "#5c1a00",
+        "tertiary": "#390d00",
+        "on-error-container": "#93000a",
+        "surface-dim": "#d9dbd3",
+        "primary-fixed": "#c1eaef",
+        "primary": "#002023",
+        "tertiary-fixed": "#ffdbcf",
+        "secondary": "#3f665c",
+        "inverse-surface": "#2e312c",
+        "surface-container-low": "#f3f4ec",
+        "on-primary-fixed-variant": "#254d51",
+        "primary-fixed-dim": "#a5ced2",
+        "surface-variant": "#e1e3dc",
+        "inverse-primary": "#a5ced2",
+        "error": "#ba1a1a",
+        "surface": "#f8faf2",
+        "surface-container-highest": "#e1e3dc",
+        "on-surface-variant": "#414849"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "space-md": "1.25rem",
+        "gutter-mobile": "1rem",
+        "space-xs": "0.375rem",
+        "space-lg": "2rem",
+        "space-xl": "3.5rem",
+        "space-sm": "0.75rem",
+        "margin-mobile": "1.25rem",
+        "gutter": "1.5rem",
+        "margin": "3rem"
+      },
+      "fontFamily": {
+        "headline-lg-mobile": ["Plus Jakarta Sans"],
+        "label-lg": ["Inter"],
+        "display-hero": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "body-lg": ["Inter"],
+        "label-md": ["Inter"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "body-md": ["Inter"],
+        "display-hero-mobile": ["Plus Jakarta Sans"],
+        "body-sm": ["Inter"],
+        "label-sm": ["Inter"]
+      },
+      "fontSize": {
+        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+        "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }],
+        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+        "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+        "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+        "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+        "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+      }
+    }
+  }
+};
+</script>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<header class="fixed top-0 left-0 w-full z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="bg-primary text-on-primary">
+<div class="w-full px-margin flex flex-wrap items-center justify-between h-10">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-error-container text-on-error-container px-space-xs py-0.5 rounded">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wide uppercase">Trauma Resuscitation Active</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[16px]">emergency</span>
+<span class="font-label-md text-label-md text-surface-bright">Emergency &amp; Ambulance: <strong class="text-secondary-fixed">108 / +91 (0) 484 719 9000</strong></span>
+</div>
+</div>
+<div class="hidden xl:flex items-center gap-space-md">
+<div class="flex items-center gap-space-sm font-label-md text-label-md text-primary-fixed-dim">
+<a class="hover:text-on-primary transition-colors" data-path="find-a-doctor" href="#">Find Doctor</a>
+<span class="text-outline">|</span>
+<a class="hover:text-on-primary transition-colors" data-path="patient-and-visitor-guide" href="#">Patient Portal (Reports &amp; Rx)</a>
+<span class="text-outline">|</span>
+<a class="hover:text-on-primary transition-colors" data-path="international-patients-and-second-opinion" href="#">International Patients Lounge</a>
+<span class="text-outline">|</span>
+<a class="hover:text-on-primary transition-colors" data-path="international-patients-and-second-opinion" href="#">Second Medical Opinion</a>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm">
+<div class="flex items-center gap-1 text-surface-variant cursor-pointer hover:text-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Kochi Institute</span>
+</div>
+<div class="flex items-center gap-1 text-surface-variant cursor-pointer hover:text-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[14px]">language</span>
+<span>EN</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface/90 backdrop-blur-xl">
+<div class="w-full px-margin flex items-center justify-between h-20">
+<div class="flex items-center gap-space-md">
+<a class="flex items-center gap-space-sm" data-path="home" href="#">
+<div class="w-10 h-10 rounded bg-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">local_hospital</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">SANCTUARY HEALTH</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mt-0.5">Institute of Quaternary Sciences</span>
+</div>
+</a>
+</div>
+<nav class="hidden lg:flex items-center gap-space-sm" data-active-classes="bg-secondary-container text-on-secondary-container font-semibold rounded">
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a>
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="find-a-doctor" href="#">Find a Doctor</a>
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="institutes-of-care" href="#">Institutes of Care</a>
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="patient-and-visitor-guide" href="#">Patient &amp; Visitor Guide</a>
+<a class="font-label-lg text-label-lg px-space-xs py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="international-patients-and-second-opinion" href="#">International Patients &amp; Second Opinion</a>
+</nav>
+<div class="flex items-center gap-space-sm">
+<a class="hidden sm:flex items-center gap-1 px-space-xs py-1.5 rounded bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-all font-label-md text-label-md font-semibold" data-path="home" href="#">
+<span class="material-symbols-outlined text-[16px]">e911_emergency</span>
+<span>SOS Response</span>
+</a>
+<a class="px-space-sm py-2 rounded bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all font-label-md text-label-md font-semibold shadow-sm" data-path="home" href="#">Book Consultation</a>
+<a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary-container transition-colors" data-path="patient-and-visitor-guide" href="#">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<main class="w-full pt-[7.5rem] bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Editorial Header & Trust Ribbon -->
+<section class="w-full px-margin py-space-xl bg-surface-container-low relative overflow-hidden">
+<div class="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none flex items-center justify-center">
+<svg class="w-full h-full text-primary" fill="currentColor" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="none" r="48" stroke="currentColor" stroke-dasharray="2 2" stroke-width="0.5"></circle>
+<ellipse cx="50" cy="50" fill="none" rx="48" ry="20" stroke="currentColor" stroke-width="0.5"></ellipse>
+<ellipse cx="50" cy="50" fill="none" rx="20" ry="48" stroke="currentColor" stroke-width="0.5"></ellipse>
+<line stroke="currentColor" stroke-width="0.5" x1="2" x2="98" y1="50" y2="50"></line>
+<line stroke="currentColor" stroke-width="0.5" x1="50" x2="50" y1="2" y2="98"></line>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg relative z-10">
+<!-- Breadcrumb & Tag -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" data-path="home" href="#">Home</a>
+<span class="text-outline">/</span>
+<span class="text-primary font-semibold">International Patients &amp; Second Opinion</span>
+</div>
+<div class="flex items-center gap-space-xs bg-secondary-container px-3 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-secondary-container font-semibold">Global Desk Active • 24/7 Multi-Lingual Triage</span>
+</div>
+</div>
+<!-- Hero Copy Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<span class="font-label-lg text-label-lg text-secondary tracking-widest uppercase">Center for Global Medical Transfer</span>
+<h1 class="font-display-hero text-display-hero text-primary tracking-tight">
+            Global Quaternary Care. World-Renowned Medical Expertise Without Borders.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mt-2">
+            Dedicated international patient desk providing seamless medical visa coordination, complimentary airport ambulance transfer, multilingual care liaisons, and 48-hour collegiate tumor board opinions.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-3">
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Priority Concierge Dispatch</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-sm text-headline-sm text-primary">+91 (0) 484 719 9050</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant WhatsApp Case Registration, FRRO Visa Support &amp; Flight Bed Coordination</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Average Response: &lt; 14 minutes</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Metrics Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm mt-4">
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-2">
+<span class="material-symbols-outlined text-[24px]">public</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Global Reach</span>
+</div>
+<span class="font-headline-lg text-headline-lg text-primary">64+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Sovereign Nations Served Across 5 Continents</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-2">
+<span class="material-symbols-outlined text-[24px]">timer</span>
+<span class="font-label-sm text-label-sm bg-secondary-container px-2 py-0.5 rounded text-on-secondary-container">Clinical SLA</span>
+</div>
+<span class="font-headline-lg text-headline-lg text-primary">48h</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Guaranteed Tumor Board Written Monograph</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-2">
+<span class="material-symbols-outlined text-[24px]">translate</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Cultural Care</span>
+</div>
+<span class="font-headline-lg text-headline-lg text-primary">12</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">In-House Diplomatic Care Liaisons</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-2">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Audited Safety</span>
+</div>
+<span class="font-headline-lg text-headline-lg text-primary">JCI &amp; CAP</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Gold Seal 7th Ed. &amp; Pathology Standard</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Collegiate Second Opinion Submission Portal -->
+<section class="w-full px-margin py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col lg:flex-row gap-space-xl items-start">
+<!-- Context & Value Column -->
+<div class="w-full lg:w-5/12 flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-5 bg-secondary rounded-full"></span>
+<span class="font-label-md text-label-md text-secondary uppercase font-semibold">Institutional Review Board</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">
+            Facing a Complex Diagnosis? Consult our Collegiate Specialist Board.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Quaternary medicine resolves deep clinical ambiguity. Our collegiate boards assemble surgical chairs, sub-specialty radiologists, clinical oncologists, and genomics pathologists into a single synoptic review room to validate or re-evaluate your treatment pathway.
+          </p>
+<div class="bg-surface-container p-space-md rounded flex flex-col gap-space-sm mt-2">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">lock_clock</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">HIPAA &amp; GDPR Encrypted Ingestion</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Every scan, biopsy slice, and genomic sequencing document uploaded is protected under zero-knowledge enterprise encryption.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">groups</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">Unanimous Consensus Opinion</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Never relies on a single physician. Minimum 3 department chairs sign each collegiate protocol monograph.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">history_toggle_off</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">48-Hour Execution Guarantee</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">From receipt of eligible DICOM slice packets to formal encrypted transmission.</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md p-space-sm bg-surface-container-low rounded">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm" data-alt="A portrait of Dr. Arvind Menon, Chief of Solid Organ Transplantation, wearing pristine medical surgical attire in an ultramodern hospital boardroom with soft natural light and biophilic accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh0mFT5xjk8GoMroxYsx9m5lLrZKL0AI2iqcpByYbFDNBCKdP2YGKyu7Ap2Ubf4ugnLqORFzdfxsQZCgu8h1HqFtrD1mmCvbbIe99RxX2113eferZeRoYxVVx8Z27cF5JzkvWfMHdu4iHATpr2hPQk7IayxIAPZAItK54nhTrdqF8jpZdYkKr9erkd9I8KLX_7Mw4o1wo9Xs9AfY_qZ0QzXghT70cY4AcIiAUQgbQe6UZMfuCAcDhX"/>
+<div>
+<span class="font-label-lg text-label-lg text-primary block">Prof. Dr. Arvind Menon, FRCS</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Chairperson, Collegiate Review Directorate</span>
+</div>
+</div>
+</div>
+<!-- Multi-Step Interactive Form Module -->
+<div class="w-full lg:w-7/12 bg-surface-container-lowest p-space-lg rounded shadow-md relative">
+<!-- Step Progress Ribbon -->
+<div class="flex items-center justify-between mb-space-lg pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm">1</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Origin &amp; Bio</span>
+</div>
+<span class="h-0.5 w-8 bg-surface-container"></span>
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm">2</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Specialty</span>
+</div>
+<span class="h-0.5 w-8 bg-surface-container"></span>
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm">3</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Scans</span>
+</div>
+<span class="h-0.5 w-8 bg-surface-container"></span>
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm">4</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Format</span>
+</div>
+</div>
+<!-- Step Form Containers -->
+<form class="flex flex-col gap-space-md" id="secondOpinionForm" onsubmit="event.preventDefault();">
+<!-- Step 1 Fields -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Patient Full Name *</label>
+<input class="w-full p-2.5 bg-surface-container-low rounded text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" placeholder="e.g. Tariq Al-Mansoor" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Originating Country / Territory *</label>
+<select class="w-full p-2.5 bg-surface-container-low rounded text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary">
+<option value="">Select Region</option>
+<option value="gcc">GCC / Middle East (UAE, Oman, Qatar, Saudi Arabia, Kuwait)</option>
+<option value="africa">East &amp; Southern Africa (Kenya, Tanzania, Nigeria, Mauritius)</option>
+<option value="se_asia">South &amp; Southeast Asia (Bangladesh, Maldives, Nepal, Indonesia)</option>
+<option value="europe">United Kingdom &amp; European Union</option>
+<option value="americas">North &amp; South America</option>
+<option value="other">Central Asia &amp; Australasia</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Direct WhatsApp / Mobile *</label>
+<input class="w-full p-2.5 bg-surface-container-low rounded text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" placeholder="+971 50 123 4567" type="tel"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Email for Encrypted Dossier *</label>
+<input class="w-full p-2.5 bg-surface-container-low rounded text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" placeholder="patient.dossier@domain.com" type="email"/>
+</div>
+</div>
+<!-- Step 2 Fields -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Quaternary Specialty Required *</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+<label class="flex items-center gap-2 p-2 rounded bg-surface-container-low cursor-pointer hover:bg-secondary-container transition-colors">
+<input checked="" class="accent-primary" name="specialty" type="radio" value="transplant"/>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Organ Transplant</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded bg-surface-container-low cursor-pointer hover:bg-secondary-container transition-colors">
+<input class="accent-primary" name="specialty" type="radio" value="neuro"/>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Neuro-Oncology</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded bg-surface-container-low cursor-pointer hover:bg-secondary-container transition-colors">
+<input class="accent-primary" name="specialty" type="radio" value="cardiac"/>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Structural Heart</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded bg-surface-container-low cursor-pointer hover:bg-secondary-container transition-colors">
+<input class="accent-primary" name="specialty" type="radio" value="rare"/>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Rare Diseases</span>
+</label>
+</div>
+</div>
+<!-- Step 3: Secure DICOM Upload Zone -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Diagnostic Imaging &amp; Histology Upload (DICOM, PDF, ZIP)</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Up to 2.5 GB Secure Stream</span>
+</label>
+<div class="p-space-lg bg-surface-container-low rounded flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container transition-all">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-[28px]">cloud_upload</span>
+</div>
+<span class="font-label-lg text-label-lg text-primary font-semibold">Drop DICOM folder, MRI/CT archives, or Biopsy reports</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Direct pacs upload compliant with ISO-27001 medical grade encryption</span>
+<div class="flex items-center gap-2 mt-3 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>End-to-End TLS 1.3 Transport Encryption</span>
+</div>
+</div>
+</div>
+<!-- Step 4: Consult Format -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Preferred Consultation Format</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+<label class="p-3 bg-surface-container-low rounded cursor-pointer flex items-start gap-3 hover:bg-secondary-container/50 transition-colors">
+<input checked="" class="accent-primary mt-1" name="format" type="radio" value="monograph"/>
+<div>
+<span class="font-label-md text-label-md text-primary font-semibold block">Collegiate Written Monograph</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Complete clinical summary, treatment validation, surgical risk profiling within 48h.</span>
+</div>
+</label>
+<label class="p-3 bg-surface-container-low rounded cursor-pointer flex items-start gap-3 hover:bg-secondary-container/50 transition-colors">
+<input class="accent-primary mt-1" name="format" type="radio" value="teleconsult"/>
+<div>
+<span class="font-label-md text-label-md text-primary font-semibold block">Live Multidisciplinary Tele-Consult</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">45-minute live interactive panel with board chairs and simultaneous medical interpreter.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Submit CTA -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-2">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Turnaround SLA timer activates instantly upon receipt.</span>
+</div>
+<button class="w-full sm:w-auto px-space-lg py-3 bg-primary text-on-primary rounded font-label-lg text-label-lg font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center justify-center gap-2" type="button">
+<span>Submit Dossier for 48h Board Review</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Complete End-to-End International Patient Journey -->
+<section class="w-full px-margin py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto gap-2">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest font-semibold">The Sanctuary Continuity Standard</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Your End-to-End Global Care Pathway</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          From your primary residence to clinical recovery and lifetime post-discharge monitoring, our diplomatic healthcare concierge removes every friction point.
+        </p>
+</div>
+<!-- 4-Stage Asymmetric Journey Rail -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md mt-4">
+<!-- Stage 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col gap-space-sm relative">
+<div class="w-9 h-9 rounded bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">01</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Pre-Arrival Stage</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Diagnostic &amp; Visa Clear</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Full diagnostic report reconciliation, tailored multi-specialty clinical roadmap, and official FRRO Medical Visa invitation letters issued within 24 hours for patient and two attendants.
+          </p>
+<ul class="flex flex-col gap-1.5 pt-2 mt-auto text-primary font-label-sm text-label-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Transparent itemized billing quote</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Consulate liaison support</span>
+</li>
+</ul>
+</div>
+<!-- Stage 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col gap-space-sm relative">
+<div class="w-9 h-9 rounded bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">02</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Arrival &amp; Transit</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Tarmac Protocol &amp; Transfer</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Airside airport immigration assistance, private VIP tarmac reception, and dedicated advanced mobile ICU or cardiac ambulance transfer directly onto the hospital campus.
+          </p>
+<ul class="flex flex-col gap-1.5 pt-2 mt-auto text-primary font-label-sm text-label-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Pad-01 East Helipad reception ready</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Express customs clearance</span>
+</li>
+</ul>
+</div>
+<!-- Stage 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col gap-space-sm relative">
+<div class="w-9 h-9 rounded bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">03</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">In-Hospital Experience</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Diplomatic Inpatient Care</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Private international suites, round-the-clock dedicated personal liaison fluent in your native language, Halal-certified and customized dietary culinary service, and family lounge amenities.
+          </p>
+<ul class="flex flex-col gap-1.5 pt-2 mt-auto text-primary font-label-sm text-label-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Dedicated cultural officer</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>In-suite caregiver accommodations</span>
+</li>
+</ul>
+</div>
+<!-- Stage 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col gap-space-sm relative">
+<div class="w-9 h-9 rounded bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">04</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Post-Discharge</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Lifetime Continuity Vault</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Formal physician-to-physician clinical handover with your home country doctors, cloud-synced lifetime DICOM vault access, and scheduled remote quarterly tele-surveillance.
+          </p>
+<ul class="flex flex-col gap-1.5 pt-2 mt-auto text-primary font-label-sm text-label-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Multilingual discharge dossiers</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Home physician video briefing</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular International Quaternary Treatment Packages -->
+<section class="w-full px-margin py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest font-semibold">Institutional Transparency</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Benchmark Procedures &amp; Package Estimates</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Comprehensive bundles covering surgical theatre, donor evaluation, multi-specialist ICU monitoring, and recovery stay.</p>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-3 py-1.5 rounded">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+<span>Final tariff established upon DICOM review</span>
+</div>
+</div>
+<!-- Packages Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Package 1: Liver Transplant -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold">Solid Organ Transplant</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">21 Days Inpatient</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">Living Donor Liver Transplant (LDLT)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Complete dual-patient protocol: Pre-op donor &amp; recipient 3D CT volumetry, intra-operative microvascular anastomosis, 7 days dedicated Transplant ICU, and 14 days private suite monitoring.
+            </p>
+<div class="p-space-sm bg-surface-container-low rounded my-2">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Estimated Package</span>
+<span class="font-headline-sm text-headline-sm text-primary">$32,500 – $36,000</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary block mt-0.5">Comparable US/EU Tariff: $240,000+</span>
+</div>
+</div>
+<button class="w-full py-2 bg-surface-container text-primary rounded font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-colors mt-2">
+            Request Itemized Protocol
+          </button>
+</div>
+<!-- Package 2: Awake Craniotomy -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold">Neuro-Oncology</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10 Days Inpatient</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">Awake Craniotomy &amp; Intraoperative 3T MRI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Eloquence cortex glioma resection using cortical mapping, neuronavigation, intraoperative real-time 3T MRI validation, and multimodal continuous neuro-monitoring.
+            </p>
+<div class="p-space-sm bg-surface-container-low rounded my-2">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Estimated Package</span>
+<span class="font-headline-sm text-headline-sm text-primary">$14,800 – $17,500</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary block mt-0.5">Comparable US/EU Tariff: $110,000+</span>
+</div>
+</div>
+<button class="w-full py-2 bg-surface-container text-primary rounded font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-colors mt-2">
+            Request Itemized Protocol
+          </button>
+</div>
+<!-- Package 3: TAVI -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold">Structural Heart</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 Days Inpatient</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">TAVI / TAVR (Transcatheter Valve)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Minimally invasive percutaneous aortic valve replacement in Hybrid Biplane Cath Lab. Includes Edwards SAPIEN 3 or Medtronic Evolut valve prosthesis and cardiac rehabilitation.
+            </p>
+<div class="p-space-sm bg-surface-container-low rounded my-2">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Estimated Package</span>
+<span class="font-headline-sm text-headline-sm text-primary">$26,000 – $29,000</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary block mt-0.5">Includes Imported FDA Valve Prosthesis</span>
+</div>
+</div>
+<button class="w-full py-2 bg-surface-container text-primary rounded font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-colors mt-2">
+            Request Itemized Protocol
+          </button>
+</div>
+<!-- Package 4: Robotic Bilateral Knee -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold">Robotic Orthopaedics</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">7 Days Inpatient</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">Robotic Mako Bilateral Knee Replacement</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Sub-millimeter 3D CT-guided robotic bone resection, kinematic alignment implants, zero-pain epidural catheterization, and expedited daily aquatic physiotherapy.
+            </p>
+<div class="p-space-sm bg-surface-container-low rounded my-2">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Estimated Package</span>
+<span class="font-headline-sm text-headline-sm text-primary">$11,500 – $13,200</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary block mt-0.5">Dual Joint Simultaneous Replacement</span>
+</div>
+</div>
+<button class="w-full py-2 bg-surface-container text-primary rounded font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-colors mt-2">
+            Request Itemized Protocol
+          </button>
+</div>
+<!-- Package 5: CAR-T & Bone Marrow -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold">Cellular Therapeutics</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">28 Days Inpatient</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">CAR-T Cell Therapy / Autologous BMT</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              T-cell leukapheresis, genetic re-engineering, high-efficiency conditioning, and HEPA Class-10 positive pressure isolation unit stay under cellular immunotherapy directorate.
+            </p>
+<div class="p-space-sm bg-surface-container-low rounded my-2">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Estimated Package</span>
+<span class="font-headline-sm text-headline-sm text-primary">$38,000 – $44,000</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary block mt-0.5">Comparable US/EU Tariff: $450,000+</span>
+</div>
+</div>
+<button class="w-full py-2 bg-surface-container text-primary rounded font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-colors mt-2">
+            Request Itemized Protocol
+          </button>
+</div>
+<!-- Custom Rare Disease Case Card -->
+<div class="bg-primary text-on-primary p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="bg-secondary text-surface-bright px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold">Multi-Organ Care</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Custom Protocol</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright mt-1">Rare Genetic, Foetal, or Pediatric Quaternary Care</h3>
+<p class="font-body-sm text-body-sm text-primary-fixed-dim">
+              Tailored multi-stage management for complex pediatric congenital anomalies, foetal intervention, or adult multi-system disease requiring custom institutional assembly.
+            </p>
+<div class="p-space-sm bg-primary-container rounded my-2 text-on-primary">
+<span class="font-label-sm text-label-sm text-secondary-fixed block font-medium">Bespoke Concierge Dossier</span>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Direct medical board evaluation and customized hospital cost guarantee.</span>
+</div>
+</div>
+<button class="w-full py-2 bg-secondary-fixed text-on-secondary-fixed rounded font-label-md text-label-md font-semibold hover:bg-surface-bright transition-colors mt-2">
+            Initiate Case Discussion
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- International Patient Lounge & Virtual Campus Tour Section -->
+<section class="w-full px-margin py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-5 bg-secondary rounded-full"></span>
+<span class="font-label-md text-label-md text-secondary uppercase font-semibold">Hospitality &amp; Campus Sanctuary</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">
+          Designed for Quiet Serenity and Family Comfort
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Quaternary treatment demands emotional calm. Our dedicated 12,000 sq ft International Patient Pavilion features private prayer sanctuaries (all faiths), diplomatic hospitality suites, currency exchange counters, and personal executive workstations for accompanying family members.
+        </p>
+<div class="grid grid-cols-2 gap-space-sm pt-2">
+<div class="bg-surface-container-lowest p-space-sm rounded">
+<span class="material-symbols-outlined text-secondary text-[24px]">restaurant</span>
+<span class="font-label-md text-label-md text-primary block mt-1">Halal &amp; Global Diets</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Executive nutritionists tailoring Middle Eastern, African, &amp; Western menus.</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded">
+<span class="material-symbols-outlined text-secondary text-[24px]">airline_seat_individual_suite</span>
+<span class="font-label-md text-label-md text-primary block mt-1">Caregiver Suites</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Adjoining suites for family attendants with high-speed connectivity.</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded">
+<span class="material-symbols-outlined text-secondary text-[24px]">currency_exchange</span>
+<span class="font-label-md text-label-md text-primary block mt-1">Multi-Currency &amp; Wire</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct international SWIFT, wire support, and local SIM provisioning.</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded">
+<span class="material-symbols-outlined text-secondary text-[24px]">mosque</span>
+<span class="font-label-md text-label-md text-primary block mt-1">Interfaith Quiet Rooms</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dedicated prayer spaces with ablution facilities and serene garden views.</span>
+</div>
+</div>
+</div>
+<!-- Campus Media Showcase Card -->
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="relative rounded overflow-hidden shadow-lg aspect-video">
+<img class="w-full h-full object-cover" data-alt="An expansive, sunlit international patient pavilion in a modern quaternary hospital featuring warm natural timber, living vertical green walls, plush seating lounges, and floor-to-ceiling glass windows overlooking landscaped botanical gardens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUr8rKjXpfgF1PCCwfyfDM7KaEji6XUg-uGwNV1EQkDz4lZ-YED9KmXp1U1rY6sS1lj0htfHIf6-dDeG9NcaSrE76AHV8rwuX9qM8KSp1lfT3gW0pRaPVgspw0dSWtlhtKOubQnwbswgYX0JdqB9Kjia5kB4j0OeDssiIpncd4VGNeA6P8gU_rGxqfkWbqbN8GjVfo-jhgJsPzGhGd_y3uLTFhGigmyu2BUIZb7SB3n7JswVPaHJAO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-space-md">
+<div class="flex items-center justify-between w-full text-on-primary">
+<div>
+<span class="font-headline-sm text-headline-sm block">International Patient Lounge &amp; Private Suites</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Sanctuary Health Kochi Institute Campus • West Wing Pavilion</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Liaison Team Showcase -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="flex -space-x-3 overflow-hidden">
+<img class="inline-block h-10 w-10 rounded-full object-cover ring-2 ring-surface" data-alt="Professional portrait of an Arabic language medical coordinator smiling in formal hospitality attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC535IeTqj6In7tJW-K8r9jqdDrIC-chrIzJTA8NPYjh26-xu0rrbUJYLD_yc2jxErkSfRJlgk-PHE0ngUKTe51GM9E71An6aOp1RyZaPG47M1AchjItf23Qubqw9wr6nOw0B0GLRYR3M4AZ0wAyhupALoCTR71DFYTjdmZ-cgE77KiTmoBt1-5SI1Ks_pMlEfkRsKMBLkJSyYq7J2f_DDEzROFtJrDdRerPne5kEVwFnUh4ovMrnDJ"/>
+<img class="inline-block h-10 w-10 rounded-full object-cover ring-2 ring-surface" data-alt="Professional portrait of a Swahili and French speaking medical liaison at Sanctuary Health." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJU5j_fNcdvvlSuUOegCJ2gHWfEUoI82O8kg5iIphEnWxiS8VZz3L3xPSZcyDa4_5jjekGxe3vT8lpxxAoDAY59rq9dHMVBXj689fUB5QjKbFuz4UzaLRlV4zQwO997xj0iJBG1MgKgPzc7l39Yige5wFnsAJ4eQCGHAt8z7B55YASk1V5o0pi2Fjqa0RCcJszLU2EDyu2Hx-0A5j9OqKWJGMzKXh2qfdCV4gn-Xb_sYnGSqClSH9Q"/>
+<img class="inline-block h-10 w-10 rounded-full object-cover ring-2 ring-surface" data-alt="Professional portrait of a Russian speaking patient care manager." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByyAfsXdImXoe4UBCsyoZ1K0M0OM4rWK57I9Gf2uuYtt57RhRU23Xi0-2xaWoZuNAxvlgXDzJyPQ7eJRQfndnDQ1LgMnQN4x_RSbkt3tAz9j08UmQ1Drq30rVyi7a6w8WJMdrrRVEwb0MbfY3gtxD0gw0AEfzQhXdwGt-faHfI90TeV48TJ_64hBs-5ubjI32t_vI6F3SXaKY8HKr4DvAClwMJ_EFHfXYRmZhrcxX__IUAhZT9vfAA"/>
+</div>
+<div>
+<span class="font-label-md text-label-md text-primary font-semibold block">Speak Directly with a Cultural Liaison</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Arabic, Russian, Swahili, French, Bengali, Somali spoken fluently.</span>
+</div>
+</div>
+<button class="px-space-sm py-1.5 bg-primary text-on-primary rounded font-label-sm text-label-sm font-semibold hover:bg-primary-container transition-colors whitespace-nowrap">
+            Schedule Call
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Direct Callback & FAQ Accordion -->
+<section class="w-full px-margin py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- FAQ Left Column -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div>
+<span class="font-label-md text-label-md text-secondary uppercase font-semibold">Clear Answers</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Frequently Addressed International Inquiries</h2>
+</div>
+<div class="flex flex-col gap-space-xs" id="internationalFaq">
+<div class="bg-surface-container-lowest p-space-sm rounded">
+<details class="group cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-headline-sm text-primary list-none">
+<span>How fast can an emergency air ambulance be dispatched?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 pt-2 border-t border-surface-container">
+                Our critical care flight team operates 24/7 in partnership with certified global aeromedical providers. For regional locations (GCC, South Asia, East Africa), pressurized fixed-wing ICU aircraft can be activated within 4 to 8 hours following fit-to-fly clearance.
+              </p>
+</details>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded">
+<details class="group cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-headline-sm text-primary list-none">
+<span>What documents are needed for an urgent Indian Medical Visa (e-Med)?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 pt-2 border-t border-surface-container">
+                You only need to submit the patient and attendant passport copies alongside recent medical summaries. Our International Patient Bureau issues the formal Ministry-compliant Medical Visa Invitation Letter on hospital letterhead within 4 hours.
+              </p>
+</details>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded">
+<details class="group cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-headline-sm text-primary list-none">
+<span>How does Sanctuary Health manage foreign health insurance &amp; embassies?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 pt-2 border-t border-surface-container">
+                We maintain direct billing relationships with major international insurers including Bupa Global, Cigna Global, Allianz Care, Aetna International, as well as health ministries and military attachés across Oman, UAE, Bahrain, Kuwait, and African national insurance boards.
+              </p>
+</details>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded">
+<details class="group cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-headline-sm text-primary list-none">
+<span>Can my local home doctor participate in the collegiate tumor board?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 pt-2 border-t border-surface-container">
+                Yes. We encourage referring physicians to attend the live video discussion. A secure encrypted tele-conferencing link is provided along with real-time screen sharing of high-resolution radiology and digital pathology slides.
+              </p>
+</details>
+</div>
+</div>
+</div>
+<!-- Quick Request Callback Card -->
+<div class="lg:col-span-5 bg-surface-container p-space-lg rounded flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">contact_phone</span>
+<span class="font-label-lg text-label-lg text-primary font-semibold">Request Immediate International Callback</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Enter your contact details below. A Senior Clinical Registrar and native language care coordinator will reach out to your WhatsApp or telephone within 30 minutes.
+          </p>
+<div class="flex flex-col gap-2 mt-2">
+<input class="w-full p-2.5 bg-surface-container-lowest rounded text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary" placeholder="Your Name or Family Member" type="text"/>
+<input class="w-full p-2.5 bg-surface-container-lowest rounded text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary" placeholder="WhatsApp Number with Country Code" type="tel"/>
+<select class="w-full p-2.5 bg-surface-container-lowest rounded text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary">
+<option value="">Preferred Spoken Language</option>
+<option value="arabic">Arabic (العربية)</option>
+<option value="english">English</option>
+<option value="russian">Russian (Русский)</option>
+<option value="french">French (Français)</option>
+<option value="swahili">Swahili (Kiswahili)</option>
+<option value="bengali">Bengali (বাংলা)</option>
+</select>
+</div>
+</div>
+<div class="pt-4 flex flex-col gap-2">
+<button class="w-full py-3 bg-primary text-on-primary rounded font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors shadow-sm" type="button">
+            Request Priority Call Now
+          </button>
+<div class="flex items-center justify-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm text-center">
+<span class="material-symbols-outlined text-[14px] text-secondary">security</span>
+<span>All communications strictly confidential under medical privilege.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<footer class="w-full bg-primary text-on-primary">
+<div class="w-full px-margin py-space-xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-4 bg-secondary-fixed rounded-full"></span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright">Quaternary Centers</h3>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Cardiovascular &amp; Thoracic Surgery</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Comprehensive Neuro-Oncology</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Solid Organ Transplantation</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Precision Genomics &amp; Cellular Therapy</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Foetal &amp; Neonatal Intensive Care</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-4 bg-secondary-fixed rounded-full"></span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright">Patient Care &amp; Guides</h3>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+<li class="hover:text-surface-bright transition-colors"><a data-path="patient-and-visitor-guide" href="#">Visiting Hours &amp; ICU Protocols</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="patient-and-visitor-guide" href="#">Inpatient Admission Checklist</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="patient-and-visitor-guide" href="#">Patient Rights &amp; Responsibilities</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="international-patients-and-second-opinion" href="#">Global Tele-Consult Protocol</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="patient-and-visitor-guide" href="#">Cashless TPA &amp; Tariff Estimator</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-4 bg-secondary-fixed rounded-full"></span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright">Academics &amp; Trials</h3>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+<li class="hover:text-surface-bright transition-colors"><a data-path="home" href="#">Institutional Bioethics Board (IRB)</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="find-a-doctor" href="#">Sub-Specialty Fellowship Programmes</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="home" href="#">Active Clinical Trials Registry</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="home" href="#">Archival Library of Medicine</a></li>
+<li class="hover:text-surface-bright transition-colors"><a data-path="institutes-of-care" href="#">Translational Stem Cell Lab</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-4 bg-error rounded-full"></span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright">Emergency Dispatch</h3>
+</div>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+<div class="bg-primary-container p-space-sm rounded">
+<span class="font-label-md text-label-md text-surface-bright block">Kochi Institute Campus</span>
+<span class="text-secondary-fixed">Air Ambulance Pad: Pad-01 East</span>
+<span class="block text-outline-variant font-label-sm text-label-sm">Dispatch: +91 (0) 484 719 9001</span>
+</div>
+<div class="bg-primary-container p-space-sm rounded">
+<span class="font-label-md text-label-md text-surface-bright block">Bangalore Campus</span>
+<span class="text-secondary-fixed">Level-1 Trauma Bay</span>
+<span class="block text-outline-variant font-label-sm text-label-sm">Dispatch: +91 (0) 80 4492 8100</span>
+</div>
+<div class="bg-primary-container p-space-sm rounded">
+<span class="font-label-md text-label-md text-surface-bright block">Hyderabad Medical City</span>
+<span class="text-secondary-fixed">Emergency Stroke Unit</span>
+<span class="block text-outline-variant font-label-sm text-label-sm">Dispatch: +91 (0) 40 6821 7000</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md bg-primary-container rounded p-space-md flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[28px]">verified</span>
+<div>
+<span class="font-label-md text-label-md text-surface-bright block">JCI Gold Seal of Approval</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Hospital Program Standard (7th Edition)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[28px]">health_and_safety</span>
+<div>
+<span class="font-label-md text-label-md text-surface-bright block">NABH Digital Health</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Excellence in Clinical Safety</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[28px]">biotech</span>
+<div>
+<span class="font-label-md text-label-md text-surface-bright block">CAP Certified Lab</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">College of American Pathologists</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[28px]">eco</span>
+<div>
+<span class="font-label-md text-label-md text-surface-bright block">Green Hospital Platinum</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">IGBC Certified Infrastructure</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-primary-fixed-dim">
+<div class="flex flex-wrap items-center gap-space-sm">
+<a class="hover:text-surface-bright transition-colors" data-path="patient-and-visitor-guide" href="#">Bio-Medical Waste Annual Disclosures</a>
+<span>•</span>
+<a class="hover:text-surface-bright transition-colors" data-path="home" href="#">Clinical Governance &amp; Patient Safety</a>
+<span>•</span>
+<a class="hover:text-surface-bright transition-colors" data-path="patient-and-visitor-guide" href="#">HIPAA &amp; Privacy Policy</a>
+<span>•</span>
+<a class="hover:text-surface-bright transition-colors" data-path="patient-and-visitor-guide" href="#">Terms of Admission</a>
+</div>
+<div class="text-outline-variant">© 2025 Sanctuary Health &amp; Research Institute. All quaternary medical procedures monitored by the Global Clinical Directorate.</div>
+</div>
+</div>
+</footer>
+</body></html>
