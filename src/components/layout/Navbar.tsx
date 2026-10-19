@@ -592,10 +592,11 @@ export const Navbar: React.FC = () => {
               {/* Book Consultation CTA Button */}
               <Link
                 href="/appointments"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg bg-primary hover:bg-primary-container text-white font-semibold text-xs sm:text-sm whitespace-nowrap shadow-sm transition-all"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-lg bg-primary hover:bg-primary-container text-white font-semibold text-xs sm:text-sm whitespace-nowrap shadow-sm transition-all flex-shrink-0"
               >
-                <Calendar className="w-3.5 h-3.5 text-secondary-fixed" />
-                <span>Book Consultation</span>
+                <Calendar className="w-3.5 h-3.5 text-secondary-fixed flex-shrink-0" />
+                <span className="hidden sm:inline">Book Consultation</span>
+                <span className="inline sm:hidden">Book Visit</span>
               </Link>
 
               {/* Patient Portal Profile Icon - Shown on xl+ */}

@@ -19,9 +19,9 @@ export const UtilityBar: React.FC = () => {
     <div className="bg-primary text-white border-b border-primary-container/80 text-xs py-2 px-4 sm:px-6 lg:px-8 xl:px-10 w-full">
       <div className="w-full flex items-center justify-between gap-3">
         {/* Left: 24/7 Emergency Hotline */}
-        <div className="flex items-center gap-2 text-surface-bright whitespace-nowrap">
-          <PhoneCall className="w-3.5 h-3.5 text-secondary-fixed" />
-          <span className="text-[12px]">
+        <div className="flex items-center gap-2 text-surface-bright flex-wrap sm:flex-nowrap">
+          <PhoneCall className="w-3.5 h-3.5 text-secondary-fixed flex-shrink-0" />
+          <span className="text-[11px] sm:text-[12px]">
             24/7 Emergency:{" "}
             <a href="tel:+914842800000" className="font-bold text-secondary-fixed hover:underline">
               108 / +91 (484) 2800-000
